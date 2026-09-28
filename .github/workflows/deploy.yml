@@ -35,9 +35,9 @@ jobs:
     - name: Sync files to FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ${{ secrets.sql201.infinityfree.com}}
-        username: ${{ secrets.if0_43028427 }}
-        password: ${{ secrets.AJUPrOoklHoFxs }}
+        server: ${{ sql201.infinityfree.com.FTP_SERVER }}
+        username: ${{ if0_43028427.FTP_USERNAME }}
+        password: ${{ AJUPrOoklHoFxs.FTP_PASSWORD }}
         server-dir: /htdocs/ # Folder public/utama di InfinityFree
         exclude: |
           **/.git*
