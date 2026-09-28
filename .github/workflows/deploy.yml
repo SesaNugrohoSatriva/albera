@@ -43,6 +43,7 @@ jobs:
           **/.git*
           **/.git*/**
           **/node_modules/**
+          **/vendor/**
           **/tests/**
           README.md
           .env.example
