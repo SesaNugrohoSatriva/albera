@@ -13,8 +13,8 @@
                 </div>
 
                 <h1>
-                    Tumbuh lebih kuat,<br>
-                    <em>bersama alam.</em>
+                    Membangun Pertanian Berkelanjutan,<br>
+                    <em>Mendukung Ketahanan Pangan Nasional.</em>
                 </h1>
 
                 <p>

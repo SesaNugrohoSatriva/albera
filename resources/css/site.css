@@ -224,7 +224,7 @@ a {
 .detail-product-copy h1,
 .article-detail-header h1 {
     margin: 23px 0;
-    font: 500 clamp(58px, 7vw, 94px)/.99 var(--serif);
+    font: 500 clamp(12px, 7vw, 50px)/.99 var(--serif);
     letter-spacing: 0
 }
 
