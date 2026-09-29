@@ -20,8 +20,8 @@ Route::get('/produk/{product:slug}', [PublicSiteController::class, 'product'])->
 Route::get('/artikel/{article:slug}', [PublicSiteController::class, 'article'])->name('articles.show');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    return redirect()->route('admin.dashboard');
+})->middleware('auth')->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -29,7 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(function () {
+Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('/', fn () => view('admin.dashboard', [
         'productCount' => Product::count(),
         'articleCount' => Article::count(),

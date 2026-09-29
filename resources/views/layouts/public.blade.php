@@ -14,8 +14,7 @@
     <header class="site-header" x-data="{ open: false }">
         <div class="site-nav wrap">
             <a class="brand" href="{{ route('home') }}" aria-label="ALBERA beranda">
-                <span class="brand-mark">A<span>.</span></span>
-                <span class="brand-copy"><strong>ALBERA</strong><small>AGRO LESTARI BERKAH NUSANTARA</small></span>
+                <img class="brand-logo" src="{{ Vite::asset('resources/img/logo.png') }}" alt="ALBERA">
             </a>
             <button class="menu-toggle" type="button" @click="open = !open" aria-label="Buka menu navigasi" :aria-expanded="open">
                 <span></span><span></span>
@@ -37,8 +36,7 @@
         <div class="wrap footer-main">
             <div class="footer-about">
                 <a class="brand brand-light" href="{{ route('home') }}">
-                    <span class="brand-mark">A<span>.</span></span>
-                    <span class="brand-copy"><strong>ALBERA</strong><small>AGRO LESTARI BERKAH NUSANTARA</small></span>
+                    <img class="brand-logo" src="{{ Vite::asset('resources/img/logo.png') }}" alt="ALBERA">
                 </a>
                 <p>Mendukung produktivitas pertanian melalui solusi nutrisi tanaman yang berkualitas, konsisten, dan bertanggung jawab.</p>
                 <div class="socials" aria-label="Media sosial">

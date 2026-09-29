@@ -79,8 +79,6 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        if (config('albera.admin.email') || config('albera.admin.password')) {
-            $this->call(AdminUserSeeder::class);
-        }
+        $this->call(LoginUserSeeder::class);
     }
 }
