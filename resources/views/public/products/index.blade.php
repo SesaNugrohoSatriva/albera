@@ -33,7 +33,7 @@
                         <article class="product-tile">
                             <a class="product-visual" href="{{ route('products.show', $product->slug) }}">
                                 @if($product->image)
-                                    <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" loading="lazy">
+                                    <img src="{{ route('media', ['path' => $product->image]) }}" alt="{{ $product->name }}" loading="lazy">
                                 @else
                                     <div class="product-placeholder">
                                         <span>ALBERA</span>

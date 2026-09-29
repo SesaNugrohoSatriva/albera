@@ -133,7 +133,7 @@
                         <article class="product-tile reveal">
                             <a class="product-visual" href="{{ route('products.show', $product->slug) }}">
                                 @if($product->image)
-                                    <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" loading="lazy">
+                                    <img src="{{ route('media', ['path' => $product->image]) }}" alt="{{ $product->name }}" loading="lazy">
                                 @else
                                     <div class="product-placeholder">
                                         <span>ALBERA</span>
@@ -262,7 +262,7 @@
                         <article class="director-tile reveal">
                             <div class="director-portrait">
                                 @if($director->photo)
-                                    <img src="{{ asset('storage/' . $director->photo) }}" alt="{{ $director->name }}" loading="lazy">
+                                    <img src="{{ route('media', ['path' => $director->photo]) }}" alt="{{ $director->name }}" loading="lazy">
                                 @else
                                     <span>
                                         {{ collect(explode(' ', $director->name))->map(fn($part) => mb_substr($part, 0, 1))->take(2)->implode('') }}
@@ -315,7 +315,7 @@
                         <article class="article-tile reveal">
                             <a class="article-image" href="{{ route('articles.show', $article->slug) }}">
                                 @if($article->image)
-                                    <img src="{{ asset('storage/' . $article->image) }}" alt="{{ $article->title }}" loading="lazy">
+                                    <img src="{{ route('media', ['path' => $article->image]) }}" alt="{{ $article->title }}" loading="lazy">
                                 @else
                                     <div class="article-placeholder">
                                         <span>ALBERA JOURNAL</span>

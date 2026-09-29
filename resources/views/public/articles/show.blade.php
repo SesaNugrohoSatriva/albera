@@ -35,7 +35,7 @@
 
         <div class="article-detail-cover wrap">
             @if($article->image)
-                <img src="{{ asset('storage/' . $article->image) }}" alt="{{ $article->title }}">
+                <img src="{{ route('media', ['path' => $article->image]) }}" alt="{{ $article->title }}">
             @else
                 <div class="article-placeholder">
                     <span>ALBERA JOURNAL</span>
@@ -78,7 +78,7 @@
                         <article class="article-tile">
                             <a class="article-image" href="{{ route('articles.show', $related->slug) }}">
                                 @if($related->image)
-                                    <img src="{{ asset('storage/' . $related->image) }}" alt="{{ $related->title }}" loading="lazy">
+                                    <img src="{{ route('media', ['path' => $related->image]) }}" alt="{{ $related->title }}" loading="lazy">
                                 @else
                                     <div class="article-placeholder">
                                         <span>ALBERA JOURNAL</span>

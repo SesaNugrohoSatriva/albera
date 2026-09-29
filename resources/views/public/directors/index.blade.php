@@ -34,7 +34,7 @@
                         <article class="director-tile">
                             <div class="director-portrait">
                                 @if($director->photo)
-                                    <img src="{{ asset('storage/' . $director->photo) }}" alt="{{ $director->name }}" loading="lazy">
+                                    <img src="{{ route('media', ['path' => $director->photo]) }}" alt="{{ $director->name }}" loading="lazy">
                                 @else
                                         <span>
                                             {{ collect(explode(' ', $director->name))

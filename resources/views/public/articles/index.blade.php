@@ -33,7 +33,7 @@
                         <article class="article-tile">
                             <a class="article-image" href="{{ route('articles.show', $article->slug) }}">
                                 @if($article->image)
-                                    <img src="{{ asset('storage/' . $article->image) }}" alt="{{ $article->title }}" loading="lazy">
+                                    <img src="{{ route('media', ['path' => $article->image]) }}" alt="{{ $article->title }}" loading="lazy">
                                 @else
                                     <div class="article-placeholder">
                                         <span>ALBERA JOURNAL</span>

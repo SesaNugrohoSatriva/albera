@@ -16,7 +16,7 @@
         <div class="wrap product-detail-grid">
             <div class="detail-product-image">
                 @if($product->image)
-                    <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
+                    <img src="{{ route('media', ['path' => $product->image]) }}" alt="{{ $product->name }}">
                 @else
                     <div class="product-placeholder">
                         <span>ALBERA</span>
@@ -94,7 +94,7 @@
                         <article class="product-tile">
                             <a class="product-visual" href="{{ route('products.show', $related->slug) }}">
                                 @if($related->image)
-                                    <img src="{{ asset('storage/' . $related->image) }}" alt="{{ $related->name }}" loading="lazy">
+                                    <img src="{{ route('media', ['path' => $related->image]) }}" alt="{{ $related->name }}" loading="lazy">
                                 @else
                                     <div class="product-placeholder">
                                         <span>ALBERA</span>
