@@ -542,7 +542,8 @@ a {
 .detail-product-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    padding: 18px;
+    object-fit: contain;
     transition: transform .6s
 }
 
@@ -735,7 +736,8 @@ a {
 .director-portrait img {
     width: 100%;
     height: 100%;
-    object-fit: cover
+    padding: 0;
+    object-fit: contain
 }
 
 .director-portrait>span {
@@ -801,7 +803,8 @@ a {
 .article-detail-cover img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    padding: 12px;
+    object-fit: contain;
     transition: transform .6s
 }
 
@@ -1073,6 +1076,22 @@ a {
     background: #e4eadb
 }
 
+.detail-product-image.has-image {
+    width: fit-content;
+    max-width: 100%;
+    height: auto;
+    min-height: 180px;
+    padding: 18px
+}
+
+.detail-product-image.has-image img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 620px;
+    padding: 0
+}
+
 .detail-product-copy h1 {
     margin: 20px 0 18px;
     font-size: clamp(43px, 5vw, 65px);
@@ -1190,9 +1209,23 @@ a {
 }
 
 .article-detail-cover {
-    height: 470px;
+    width: fit-content;
+    max-width: calc(100% - 48px);
+    height: auto;
+    min-height: 180px;
+    padding: 18px;
     overflow: hidden;
     background: #e0e9d6
+}
+
+.article-detail-cover img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 620px;
+    padding: 0;
+    object-fit: contain
 }
 
 .article-detail-cover .article-placeholder {
@@ -1572,15 +1605,18 @@ a {
 }
 
 .admin-thumb {
-    width: 45px;
-    height: 42px;
-    object-fit: cover;
-    background: #e5eadc
+    width: 72px;
+    height: 62px;
+    padding: 4px;
+    border: 1px solid #dfe6d8;
+    border-radius: 4px;
+    object-fit: contain;
+    background: #f0f3eb
 }
 
 .admin-placeholder-thumb {
-    width: 45px;
-    height: 42px;
+    width: 72px;
+    height: 62px;
     display: grid;
     place-items: center;
     color: #63784f;
@@ -2109,7 +2145,9 @@ a {
     }
 
     .article-detail-cover {
-        height: 280px
+        max-width: calc(100% - 38px);
+        min-height: 140px;
+        padding: 10px
     }
 
     .article-body-layout {

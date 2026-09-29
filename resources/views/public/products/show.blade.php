@@ -14,7 +14,7 @@
         </div>
 
         <div class="wrap product-detail-grid">
-            <div class="detail-product-image">
+            <div class="detail-product-image{{ $product->image ? ' has-image' : '' }}">
                 @if($product->image)
                     <img src="{{ route('media', ['path' => $product->image]) }}" alt="{{ $product->name }}">
                 @else
