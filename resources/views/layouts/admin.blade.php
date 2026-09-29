@@ -12,7 +12,7 @@
 <body class="admin-body">
     <div class="admin-shell">
         <aside class="admin-sidebar">
-            <a class="brand brand-light" href="{{ route('admin.dashboard') }}"><span class="brand-mark">A<span>.</span></span><span class="brand-copy"><strong>ALBERA</strong><small>CONTENT STUDIO</small></span></a>
+            <a class="brand brand-light" href="{{ route('admin.dashboard') }}"><img class="admin-brand-logo" src="{{ Vite::asset('resources/img/logo.png') }}" alt="ALBERA"></a>
             <p class="admin-nav-label">Workspace</p>
             <nav class="admin-nav" aria-label="Navigasi admin">
                 <a class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}" href="{{ route('admin.dashboard') }}"><span>01</span>Ringkasan</a>

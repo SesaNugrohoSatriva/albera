@@ -1322,13 +1322,13 @@ a {
 /* Admin workspace */
 .admin-body {
     min-height: 100vh;
-    background: #f3f5ef
+    background: #e8efe9
 }
 
 .admin-shell {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 250px 1fr
+    grid-template-columns: 238px 1fr
 }
 
 .admin-sidebar {
@@ -1337,18 +1337,26 @@ a {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 27px 20px;
+    padding: 25px 16px;
     color: white;
-    background: var(--deep)
+    border-right: 0;
+    background: #173b2e
 }
 
 .admin-sidebar .brand {
-    margin: 0 0 48px 6px
+    margin: 0 0 46px 8px
+}
+
+.admin-brand-logo {
+    width: 142px;
+    height: 48px;
+    object-fit: contain;
+    object-position: left center
 }
 
 .admin-nav-label {
     margin: 0 0 12px 9px;
-    color: #91a395;
+    color: #9bb3a4;
     font-size: 9px;
     font-weight: 700;
     letter-spacing: .14em;
@@ -1364,8 +1372,9 @@ a {
     display: flex;
     align-items: center;
     gap: 11px;
-    padding: 11px 12px;
-    color: #c7d2ca;
+    padding: 12px;
+    border-radius: 9px;
+    color: #c6d5cc;
     font-size: 12px;
     transition: background .2s, color .2s
 }
@@ -1373,12 +1382,12 @@ a {
 .admin-nav a:hover,
 .admin-nav a.active {
     color: white;
-    background: rgb(255 255 255 / 11%)
+    background: rgb(255 255 255 / 12%)
 }
 
 .admin-nav a span {
     width: 20px;
-    color: var(--leaf);
+    color: #b7d368;
     font-size: 14px;
     text-align: center
 }
@@ -1391,7 +1400,7 @@ a {
 
 .admin-sidebar-bottom a,
 .admin-sidebar-bottom button {
-    color: #c7d2ca;
+    color: #c6d5cc;
     font-size: 11px
 }
 
@@ -1416,8 +1425,8 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 0 42px;
-    border-bottom: 1px solid #e1e6dc;
-    background: #fffefa
+    border-bottom: 1px solid #d7e1d8;
+    background: #f1f6f1
 }
 
 .admin-topbar>span {
@@ -1440,7 +1449,7 @@ a {
     place-items: center;
     border-radius: 50%;
     color: var(--forest);
-    background: var(--leaf-soft)
+    background: #d3e5c6
 }
 
 .admin-content {
@@ -1459,7 +1468,8 @@ a {
 
 .admin-heading h1 {
     margin: 6px 0 0;
-    font: 600 36px/1.1 var(--serif)
+    font: 700 34px/1.1 var(--sans);
+    letter-spacing: -.03em
 }
 
 .admin-heading p {
@@ -1481,8 +1491,9 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 0 14px;
-    border: 0;
+    padding: 0 16px;
+    border: 1px solid transparent;
+    border-radius: 8px;
     color: white;
     background: var(--forest);
     font-size: 11px;
@@ -1491,7 +1502,8 @@ a {
 }
 
 .admin-button:hover {
-    background: #28523e
+    background: #28523e;
+    transform: translateY(-1px)
 }
 
 .admin-button-danger {
@@ -1512,7 +1524,7 @@ a {
     margin-bottom: 20px;
     padding: 12px 15px;
     color: #27553b;
-    background: #e2edda;
+    background: #d8e8d7;
     font-size: 11px
 }
 
@@ -1524,9 +1536,11 @@ a {
 }
 
 .admin-stat {
-    padding: 21px;
-    border: 1px solid #e0e5da;
-    background: #fffefa
+    padding: 22px;
+    border: 1px solid #e0e9e0;
+    border-radius: 12px;
+    background: #f8fbf8;
+    box-shadow: 0 8px 24px rgb(31 70 48 / 5%)
 }
 
 .admin-stat span {
@@ -1537,12 +1551,15 @@ a {
 .admin-stat strong {
     display: block;
     margin-top: 8px;
-    font: 600 31px var(--serif)
+    font: 700 31px var(--sans)
 }
 
 .admin-panel {
-    border: 1px solid #e0e5da;
-    background: #fffefa
+    overflow: hidden;
+    border: 1px solid #e0e9e0;
+    border-radius: 12px;
+    background: #f8fbf8;
+    box-shadow: 0 8px 24px rgb(31 70 48 / 4%)
 }
 
 .admin-panel-head {
@@ -1577,7 +1594,7 @@ a {
 .admin-table th {
     padding: 11px 15px;
     color: #7d877a;
-    background: #f8f9f5;
+    background: #eef4ee;
     font-size: 9px;
     font-weight: 700;
     letter-spacing: .07em;
@@ -1655,8 +1672,10 @@ a {
 .admin-form {
     max-width: 780px;
     padding: 24px;
-    border: 1px solid #e0e5da;
-    background: #fffefa
+    border: 1px solid #e0e9e0;
+    border-radius: 12px;
+    background: #f8fbf8;
+    box-shadow: 0 8px 24px rgb(31 70 48 / 4%)
 }
 
 .admin-form-grid {
@@ -1687,7 +1706,7 @@ a {
     min-height: 40px;
     padding: 9px 11px;
     border: 1px solid #dce2d8;
-    border-radius: 0;
+    border-radius: 8px;
     outline: none;
     color: var(--ink);
     background: white;
@@ -1778,12 +1797,16 @@ a {
     flex-direction: column;
     justify-content: space-between;
     padding: 19px;
-    border: 1px solid #e0e5da;
-    background: #fffefa;
-    transition: transform .2s
+    border: 1px solid #e0e9e0;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgb(31 70 48 / 4%);
+    transition: transform .2s, box-shadow .2s, border-color .2s
 }
 
 .admin-shortcut:hover {
+    border-color: #b9d5af;
+    box-shadow: 0 12px 30px rgb(31 70 48 / 8%);
     transform: translateY(-3px)
 }
 
@@ -1793,7 +1816,7 @@ a {
 }
 
 .admin-shortcut strong {
-    font: 600 19px var(--serif)
+    font: 700 19px var(--sans)
 }
 
 .admin-shortcut b {
