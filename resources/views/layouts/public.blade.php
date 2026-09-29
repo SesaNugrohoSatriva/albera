@@ -40,9 +40,9 @@
                 </a>
                 <p>Mendukung produktivitas pertanian melalui solusi nutrisi tanaman yang berkualitas, konsisten, dan bertanggung jawab.</p>
                 <div class="socials" aria-label="Media sosial">
-                    <a href="https://www.threads.net/" target="_blank" rel="noopener noreferrer">Threads <span>↗</span></a>
-                    <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok <span>↗</span></a>
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook <span>↗</span></a>
+                    <a href="https://www.threads.com/@albera.official" target="_blank" rel="noopener noreferrer">Threads <span>↗</span></a>
+                    <a href="https://www.tiktok.com/@alberaofficial?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">TikTok <span>↗</span></a>
+                    <a href="https://www.facebook.com/share/1FVvQ5YWyT/" target="_blank" rel="noopener noreferrer">Facebook <span>↗</span></a>
                 </div>
             </div>
             <div class="footer-column">

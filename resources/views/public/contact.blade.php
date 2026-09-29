@@ -76,15 +76,15 @@
                     <span>MEDIA SOSIAL</span>
 
                     <div>
-                        <a href="https://www.threads.net/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.threads.com/@albera.official" target="_blank" rel="noopener noreferrer">
                             Threads ↗
                         </a>
 
-                        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.tiktok.com/@alberaofficial?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">
                             TikTok ↗
                         </a>
 
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.facebook.com/share/1FVvQ5YWyT/" target="_blank" rel="noopener noreferrer">
                             Facebook ↗
                         </a>
                     </div>
