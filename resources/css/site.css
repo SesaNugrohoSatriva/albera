@@ -1478,6 +1478,20 @@ a {
     font-size: 11px
 }
 
+.admin-dashboard-heading {
+    margin-bottom: 34px
+}
+
+.admin-dashboard-heading h1 {
+    font: 600 36px/1.12 var(--serif);
+    letter-spacing: 0
+}
+
+.admin-dashboard-heading p {
+    margin-top: 10px;
+    font-size: 12px
+}
+
 .admin-kicker {
     color: #718656;
     font-size: 9px;
@@ -1531,27 +1545,35 @@ a {
 .admin-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-bottom: 25px
+    gap: 12px;
+    margin-bottom: 42px
 }
 
 .admin-stat {
-    padding: 22px;
-    border: 1px solid #e0e9e0;
-    border-radius: 12px;
-    background: #f8fbf8;
-    box-shadow: 0 8px 24px rgb(31 70 48 / 5%)
+    padding: 20px 22px;
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--leaf);
+    border-radius: 8px;
+    background: var(--white)
+}
+
+.admin-stat:nth-child(2) {
+    border-top-color: var(--clay)
+}
+
+.admin-stat:nth-child(3) {
+    border-top-color: var(--forest)
 }
 
 .admin-stat span {
     color: #748071;
-    font-size: 10px
+    font-size: 11px
 }
 
 .admin-stat strong {
     display: block;
-    margin-top: 8px;
-    font: 700 31px var(--sans)
+    margin-top: 10px;
+    font: 500 38px/1 var(--serif)
 }
 
 .admin-panel {
@@ -1779,49 +1801,67 @@ a {
     font-weight: 700
 }
 
-.admin-welcome {
-    margin: 0 0 22px;
-    color: #718071;
-    font-size: 12px
+.admin-dashboard-section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 16px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line)
+}
+
+.admin-dashboard-section-head h2 {
+    margin: 3px 0 0;
+    font: 600 22px/1.2 var(--serif)
+}
+
+.admin-dashboard-section-head>span {
+    color: var(--muted);
+    font-size: 10px
 }
 
 .admin-shortcuts {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 15px
+    gap: 12px
 }
 
 .admin-shortcut {
-    min-height: 150px;
+    min-height: 132px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 19px;
-    border: 1px solid #e0e9e0;
-    border-radius: 12px;
-    background: #ffffff;
-    box-shadow: 0 8px 24px rgb(31 70 48 / 4%);
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--white);
     transition: transform .2s, box-shadow .2s, border-color .2s
 }
 
 .admin-shortcut:hover {
-    border-color: #b9d5af;
-    box-shadow: 0 12px 30px rgb(31 70 48 / 8%);
-    transform: translateY(-3px)
+    border-color: #a7bb88;
+    background: #f2f6e9;
+    transform: translateY(-2px)
 }
 
 .admin-shortcut span {
     color: #74875b;
-    font-size: 10px
+    font-size: 11px
 }
 
 .admin-shortcut strong {
-    font: 700 19px var(--sans)
+    font: 600 20px/1.2 var(--serif)
 }
 
 .admin-shortcut b {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
     color: #74875b;
-    text-align: right
+    background: var(--leaf-soft)
 }
 
 @media(max-width:900px) {

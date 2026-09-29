@@ -22,6 +22,7 @@
             </nav>
             <div class="admin-sidebar-bottom">
                 <a href="{{ route('home') }}" target="_blank">Lihat situs <span>↗</span></a>
+                <a href="{{ route('profile.edit') }}">Ubah password</a>
                 <form method="POST" action="{{ route('logout') }}">@csrf<button type="submit">Keluar dari admin</button></form>
             </div>
         </aside>
