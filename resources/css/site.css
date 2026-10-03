@@ -1565,6 +1565,12 @@ a {
     margin-bottom: 42px
 }
 
+.admin-dashboard .admin-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 36px
+}
+
 .admin-stat {
     padding: 20px 22px;
     border: 1px solid var(--line);
@@ -1841,6 +1847,11 @@ a {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px
+}
+
+.admin-dashboard .admin-shortcuts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px
 }
 
 .admin-shortcut {
@@ -2386,6 +2397,11 @@ a {
 
     .admin-shortcuts {
         grid-template-columns: 1fr
+    }
+
+    .admin-dashboard .admin-shortcuts {
+        grid-template-columns: 1fr;
+        gap: 10px
     }
 
     .admin-shortcut {
