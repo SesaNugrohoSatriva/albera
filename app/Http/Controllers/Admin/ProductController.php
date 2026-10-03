@@ -70,9 +70,9 @@ class ProductController extends Controller
         return $request->validate([
             'name' => ['required', 'string', 'max:160'],
             'description' => ['required', 'string', 'max:10000'],
-            'nitrogen' => ['required', 'numeric', 'min:0', 'max:100'],
-            'phosphorus' => ['required', 'numeric', 'min:0', 'max:100'],
-            'potassium' => ['required', 'numeric', 'min:0', 'max:100'],
+            'nitrogen' => ['required', 'integer', 'min:0', 'max:100'],
+            'phosphorus' => ['required', 'integer', 'min:0', 'max:100'],
+            'potassium' => ['required', 'integer', 'min:0', 'max:100'],
             'netto' => ['required', 'string', 'max:80'],
             'certification' => ['nullable', 'string', 'max:160'],
             'category' => ['required', 'string', 'max:100'],
