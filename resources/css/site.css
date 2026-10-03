@@ -79,6 +79,21 @@ a {
     justify-content: space-between
 }
 
+.site-header .brand-logo {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--white);
+    object-fit: cover;
+    object-position: center
+}
+
+.site-header .brand-copy small {
+    font-size: 10px;
+    white-space: nowrap;
+    letter-spacing: .06em
+}
+
 .brand {
     display: inline-flex;
     align-items: center;
@@ -2019,6 +2034,10 @@ a {
 
     .brand-copy small {
         font-size: 7px
+    }
+
+    .site-header .brand-copy small {
+        font-size: 9px
     }
 
     .hero {

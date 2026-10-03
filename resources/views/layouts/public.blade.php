@@ -15,6 +15,10 @@
         <div class="site-nav wrap">
             <a class="brand" href="{{ route('home') }}" aria-label="ALBERA beranda">
                 <img class="brand-logo" src="{{ Vite::asset('resources/img/logo.png') }}" alt="ALBERA">
+                <span class="brand-copy">
+                    <strong>ALBERA</strong>
+                    <small>PT. Agro Lestari Berkah Nusantara</small>
+                </span>
             </a>
             <button class="menu-toggle" type="button" @click="open = !open" aria-label="Buka menu navigasi" :aria-expanded="open">
                 <span></span><span></span>
