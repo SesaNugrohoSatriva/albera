@@ -1360,14 +1360,19 @@ a {
 }
 
 .admin-sidebar .brand {
-    margin: 0 0 46px 8px
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 46px
 }
 
 .admin-brand-logo {
-    width: 142px;
-    height: 48px;
+    width: 72px;
+    height: 72px;
+    padding: 8px;
+    border-radius: 50%;
+    background: var(--white);
     object-fit: contain;
-    object-position: left center
+    object-position: center
 }
 
 .admin-nav-label {
