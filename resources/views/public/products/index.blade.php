@@ -17,8 +17,8 @@
             </div>
 
             <h1>
-                Produk untuk<br>
-                <em>kebutuhan tumbuh.</em>
+                Produk Unggulan<br>
+                <em>PT Albera</em>
             </h1>
 
             <p>
