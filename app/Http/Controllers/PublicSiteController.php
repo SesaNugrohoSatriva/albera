@@ -36,9 +36,7 @@ class PublicSiteController extends Controller
 
     public function directors()
     {
-        return view('public.directors.index', [
-            'directors' => Director::orderBy('sort_order')->orderBy('name')->paginate(12),
-        ]);
+        return view('public.directors.index');
     }
 
     public function articles()

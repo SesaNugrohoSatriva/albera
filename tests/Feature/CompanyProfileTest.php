@@ -105,6 +105,28 @@ class CompanyProfileTest extends TestCase
             ->assertSee(route('directors.index'));
     }
 
+    public function test_public_directors_page_uses_static_management_board_without_database_records(): void
+    {
+        Director::create([
+            'name' => 'Database Person',
+            'position' => 'Database Role',
+            'sort_order' => 99,
+        ]);
+
+        $this->get(route('directors.index'))
+            ->assertOk()
+            ->assertSee('MANAGEMENT BOARD')
+            ->assertSee('P.T. Agro Lestari Berkah Nusantara')
+            ->assertSee('Kenali tim yang mendukung operasional dan pengembangan PT. Agro Lestari Berkah Nusantara.')
+            ->assertSee('Fahmi Rosyadi')
+            ->assertSee('Deby Hastono')
+            ->assertSee('Muslih Riza')
+            ->assertSee('Amin Luthfy')
+            ->assertDontSee('Database Person')
+            ->assertDontSee('director-portrait')
+            ->assertDontSee('collection-pagination');
+    }
+
     public function test_vision_and_mission_has_its_own_page_and_about_keeps_its_other_sections(): void
     {
         $this->get(route('vision-mission'))

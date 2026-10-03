@@ -1,70 +1,67 @@
 @extends('layouts.public', [
-    'title' => 'Direksi | ALBERA',
-    'description' => 'Kenali tim dan jajaran direksi PT. Agro Lestari Berkah Nusantara.'
+    'title' => 'Management Board | ALBERA',
+    'description' => 'Kenali tim yang mendukung operasional dan pengembangan PT. Agro Lestari Berkah Nusantara.'
 ])
 
 @section('content')
-    <section class="collection-page">
+    <section class="collection-page management-page">
         <div class="wrap page-intro">
             <div class="detail-breadcrumb">
                 <a href="{{ route('home') }}">Beranda</a>
                 <span>/</span>
-                <span>Direksi</span>
+                <span>Management Board</span>
             </div>
 
             <div class="eyebrow">
-                Di balik ALBERA
+                MANAGEMENT BOARD
             </div>
 
-            <h1>
-                Orang-orang yang<br>
-                <em>menumbuhkan ide.</em>
-            </h1>
+            <h1>P.T. Agro Lestari Berkah Nusantara</h1>
 
             <p>
-                Kenali tim yang mendukung operasional, layanan, dan pengembangan
-                PT. Agro Lestari Berkah Nusantara.
+                Kenali tim yang mendukung operasional dan pengembangan PT. Agro Lestari Berkah Nusantara.
             </p>
         </div>
 
-        <div class="wrap collection-content">
-            @if($directors->isNotEmpty())
-                <div class="director-grid">
-                    @foreach($directors as $director)
-                        <article class="director-tile">
-                            <div class="director-portrait">
-                                @if($director->photo)
-                                    <img src="{{ route('media', ['path' => $director->photo]) }}" alt="{{ $director->name }}" loading="lazy">
-                                @else
-                                        <span>
-                                            {{ collect(explode(' ', $director->name))
-                                    ->map(fn($part) => mb_substr($part, 0, 1))
-                                    ->take(2)
-                                    ->implode('') }}
-                                        </span>
-                                @endif
-                            </div>
+        <div class="wrap collection-content management-content">
+            <div class="management-panel">
+                <div class="management-panel-heading">Struktur Organisasi</div>
 
-                            <span>{{ $director->position }}</span>
+                <div class="management-chart" aria-label="Struktur Management Board">
+                    <article class="management-card management-card-director">
+                        <h2>Fahmi Rosyadi</h2>
+                        <p>Direktur</p>
+                    </article>
 
-                            <h2>{{ $director->name }}</h2>
+                    <div class="management-connector" aria-hidden="true"></div>
 
-                            @if($director->bio)
-                                <p>{{ $director->bio }}</p>
-                            @endif
+                    <article class="management-card management-card-manager">
+                        <h2>Deby Hastono</h2>
+                        <p>Manajer Operasional</p>
+                    </article>
+
+                    <div class="management-branch" aria-hidden="true">
+                        <span class="management-branch-stem"></span>
+                        <span class="management-branch-line"></span>
+                        <span class="management-branch-drop management-branch-drop-left"></span>
+                        <span class="management-branch-drop management-branch-drop-right"></span>
+                    </div>
+
+                    <div class="management-team">
+                        <article class="management-card">
+                            <h2>Muslih Riza</h2>
+                            <p>Technical Service</p>
                         </article>
-                    @endforeach
-                </div>
 
-                <div class="collection-pagination">
-                    {{ $directors->links() }}
+                        <div class="management-team-connector" aria-hidden="true"></div>
+
+                        <article class="management-card">
+                            <h2>Amin Luthfy</h2>
+                            <p>Admin/Finance</p>
+                        </article>
+                    </div>
                 </div>
-            @else
-                <div class="empty-content">
-                    <span>01</span>
-                    <p>Profil tim ALBERA akan segera diperbarui.</p>
-                </div>
-            @endif
+            </div>
         </div>
     </section>
 @endsection

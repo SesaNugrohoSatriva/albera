@@ -1,7 +1,6 @@
-```blade
 @extends('layouts.public', [
     'title' => 'Tentang ALBERA',
-    'description' => 'Kenali PT. Agro Lestari Berkah Nusantara, visi, misi, dan komitmennya untuk pertanian Indonesia.'
+    'description' => 'Mengenal PT. Agro Lestari Berkah Nusantara (ALBERA) sebagai perusahaan agrokimia yang berfokus pada inovasi, efisiensi produktivitas, dan kelestarian lingkungan.'
 ])
 
 @section('content')
@@ -18,15 +17,15 @@
             </div>
 
             <h1>
-                Merawat tanah.<br>
-                <em>Menumbuhkan masa depan.</em>
+                Go to Modern Agriculture.<br>
+                <em>Menuju pertanian yang lebih maju.</em>
             </h1>
         </div>
 
         <div class="wrap about-page-content">
             <div class="about-page-image">
                 <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1800&q=85"
-                    alt="Lahan pertanian yang tumbuh subur" loading="lazy">
+                    alt="Pertanian modern dan produktif" loading="lazy">
             </div>
 
             <div class="about-page-copy">
@@ -34,20 +33,25 @@
                     Siapa kami
                 </div>
 
-                <h2>Solusi nutrisi tanaman, dibangun dari kemitraan.</h2>
+                <h2>
+                    Solusi pertanian modern untuk produktivitas dan keberlanjutan.
+                </h2>
 
                 <p>
-                    PT. Agro Lestari Berkah Nusantara (ALBERA) merupakan perusahaan agrokimia yang berfokus pada
-                    pengembangan dan produksi pupuk anorganik untuk kebutuhan pertanian.
+                    PT. Agro Lestari Berkah Nusantara (ALBERA) adalah perusahaan
+                    agrokimia sebagai solusi pertanian modern yang berfokus pada
+                    inovasi, efisiensi produktivitas, dan kelestarian lingkungan.
                 </p>
 
                 <p>
-                    Kami berkomitmen menjaga kualitas dan konsistensi produk, serta menjadi mitra bagi petani, distributor,
-                    dan pelaku usaha pertanian di Indonesia.
+                    ALBERA hadir sebagai mitra bagi petani, distributor, dan pelaku
+                    usaha pertanian nasional melalui penyediaan pupuk berkualitas
+                    tinggi yang diformulasikan sesuai kebutuhan spesifik sektor
+                    pertanian dan perkebunan Indonesia.
                 </p>
 
                 <a class="button button-green" href="{{ route('contact') }}">
-                    Bicara dengan tim kami
+                    Hubungi ALBERA
                     <span>↗</span>
                 </a>
             </div>
@@ -55,35 +59,38 @@
 
         <div class="wrap about-principles">
             <div class="eyebrow">
-                Prinsip kami
+                Komitmen ALBERA
             </div>
 
             <div class="principle-grid">
                 <article>
                     <span>01</span>
-                    <h3>Kualitas terjaga</h3>
+                    <h3>Pupuk Berkualitas Tinggi</h3>
                     <p>
-                        Menaruh perhatian pada mutu produk dan konsistensi proses.
+                        Menyediakan pupuk berkualitas tinggi yang diformulasikan
+                        sesuai kebutuhan spesifik sektor pertanian dan perkebunan
+                        Indonesia.
                     </p>
                 </article>
 
                 <article>
                     <span>02</span>
-                    <h3>Solusi relevan</h3>
+                    <h3>Produktivitas dan Efisiensi</h3>
                     <p>
-                        Mempertimbangkan kebutuhan nutrisi tanaman dan kondisi lapangan.
+                        Berkomitmen menjaga keseimbangan antara produktivitas,
+                        efisiensi biaya, dan kelestarian tanah.
                     </p>
                 </article>
 
                 <article>
                     <span>03</span>
-                    <h3>Kemitraan tumbuh</h3>
+                    <h3>Mitra Terpercaya</h3>
                     <p>
-                        Membangun hubungan jangka panjang dengan pelanggan dan mitra.
+                        Menjadi mitra terpercaya bagi petani, distributor, dan
+                        pelaku usaha pertanian nasional.
                     </p>
                 </article>
             </div>
         </div>
     </section>
 @endsection
-```

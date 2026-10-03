@@ -1963,6 +1963,59 @@ a {
         width: min(calc(100% - 42px), 700px)
     }
 
+    .management-page .management-content {
+        padding-block: 42px 70px
+    }
+
+    .management-page .management-panel {
+        padding: 24px 18px
+    }
+
+    .management-page .management-panel-heading {
+        margin-bottom: 24px
+    }
+
+    .management-page .management-chart {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "director"
+            "connector"
+            "manager"
+            "branch"
+            "team";
+        max-width: 460px
+    }
+
+    .management-page .management-connector {
+        height: 30px
+    }
+
+    .management-page .management-branch {
+        height: 30px
+    }
+
+    .management-page .management-branch-line,
+    .management-page .management-branch-drop {
+        display: none
+    }
+
+    .management-page .management-branch-stem {
+        height: 100%
+    }
+
+    .management-page .management-team {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0
+    }
+
+    .management-page .management-team-connector {
+        display: block;
+        width: 2px;
+        height: 30px;
+        margin-inline: auto;
+        background: #9aaa9b
+    }
+
     .site-header {
         height: 72px
     }
@@ -2485,6 +2538,144 @@ a {
     border-bottom: 1px solid var(--line)
 }
 
+
+.management-page .page-intro>p {
+    max-width: 680px
+}
+
+.management-page .management-content {
+    padding-block: 70px 105px
+}
+
+.management-page .management-panel {
+    max-width: 1040px;
+    margin-inline: auto;
+    padding: clamp(24px, 4vw, 46px);
+    border: 1px solid #d5ddd2;
+    border-top: 3px solid var(--forest);
+    background: var(--paper);
+    box-shadow: 0 16px 38px rgb(22 60 45 / 7%)
+}
+
+.management-page .management-panel-heading {
+    margin-bottom: 30px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #c5d0c4;
+    color: var(--forest);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase
+}
+
+.management-page .management-chart {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+        "director director"
+        "connector connector"
+        "manager manager"
+        "branch branch"
+        "team team";
+    justify-items: center;
+    max-width: 900px;
+    margin-inline: auto
+}
+
+.management-page .management-card {
+    width: min(100%, 390px);
+    padding: 22px 24px;
+    border: 1px solid #cbd6ca;
+    background: var(--white);
+    text-align: center
+}
+
+.management-page .management-card h2 {
+    margin: 0;
+    color: var(--forest);
+    font: 500 25px/1.25 var(--serif)
+}
+
+.management-page .management-card p {
+    margin: 7px 0 0;
+    color: #52665a;
+    font-size: 14px;
+    line-height: 1.5
+}
+
+.management-page .management-card-director {
+    grid-area: director
+}
+
+.management-page .management-connector {
+    grid-area: connector;
+    width: 2px;
+    height: 46px;
+    background: #9aaa9b
+}
+
+.management-page .management-card-manager {
+    grid-area: manager
+}
+
+.management-page .management-branch {
+    position: relative;
+    grid-area: branch;
+    width: 100%;
+    height: 58px
+}
+
+.management-page .management-branch-stem,
+.management-page .management-branch-line,
+.management-page .management-branch-drop {
+    position: absolute;
+    display: block;
+    background: #9aaa9b
+}
+
+.management-page .management-branch-stem {
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 50%
+}
+
+.management-page .management-branch-line {
+    top: 50%;
+    left: 25%;
+    width: 50%;
+    height: 2px
+}
+
+.management-page .management-branch-drop {
+    top: 50%;
+    width: 2px;
+    height: 50%
+}
+
+.management-page .management-branch-drop-left {
+    left: 25%
+}
+
+.management-page .management-branch-drop-right {
+    left: 75%
+}
+
+.management-page .management-team {
+    grid-area: team;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 56px;
+    width: 100%
+}
+
+.management-page .management-team .management-card {
+    width: 100%
+}
+
+.management-page .management-team-connector {
+    display: none
+}
 .page-intro .detail-breadcrumb {
     margin-bottom: 35px
 }
