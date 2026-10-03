@@ -70,7 +70,7 @@
                 </dl>
 
                 <a class="button button-green"
-                    href="https://wa.me/628517088221?text={{ urlencode('Halo ALBERA, saya ingin bertanya tentang ' . $product->name . '.') }}"
+                    href="https://wa.me/6281128851991?text={{ urlencode('Halo ALBERA, saya ingin bertanya tentang ' . $product->name . '.') }}"
                     target="_blank" rel="noopener noreferrer">
                     Tanyakan produk ini <span>↗</span>
                 </a>

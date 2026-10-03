@@ -57,13 +57,13 @@
                 <p>PT. Agro Lestari Berkah Nusantara</p>
                 <p>Indonesia</p>
                 <a href="mailto:info@ptalbera.co.id">info@ptalbera.co.id</a>
-                <a href="https://wa.me/628517088221" target="_blank" rel="noopener noreferrer">+62 851-5708-8221</a>
+                <a href="https://wa.me/6281128851991" target="_blank" rel="noopener noreferrer">+62 811-2885-1991</a>
             </div>
         </div>
 
     </footer>
 
-    <a class="whatsapp-float" href="https://wa.me/628517088221?text=Halo%20ALBERA%2C%20saya%20ingin%20bertanya%20tentang%20produk." target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp ALBERA">
+    <a class="whatsapp-float" href="https://wa.me/6281128851991?text=Halo%20ALBERA%2C%20saya%20ingin%20bertanya%20tentang%20produk." target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp ALBERA">
         <span class="whatsapp-icon">WA</span><span class="whatsapp-label">Tanya ALBERA</span>
     </a>
 </body>

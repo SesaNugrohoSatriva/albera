@@ -33,20 +33,40 @@
                     Ceritakan kebutuhan produk atau kerja sama Anda. Hubungi tim kami melalui kanal berikut.
                 </p>
 
-                <a class="button button-green"
-                    href="https://wa.me/628517088221?text=Halo%20ALBERA%2C%20saya%20ingin%20bertanya%20tentang%20produk%20dan%20kerja%20sama."
-                    target="_blank" rel="noopener noreferrer">
-                    Mulai chat WhatsApp
-                    <span>↗</span>
-                </a>
+                <div class="whatsapp-buttons">
+                    <a class="button button-green" href="https://wa.me/6281128851991" target="_blank" rel="noopener noreferrer">
+                        0811-2885-1991
+                        <span>↗</span>
+                    </a>
+
+                    <a class="button button-green" href="https://wa.me/6281128841991" target="_blank" rel="noopener noreferrer">
+                        0811-2884-1991
+                        <span>↗</span>
+                    </a>
+
+                    <a class="button button-green" href="https://wa.me/6281128871991" target="_blank" rel="noopener noreferrer">
+                        0811-2887-1991
+                        <span>↗</span>
+                    </a>
+                </div>
             </div>
 
             <div class="contact-details">
                 <div>
                     <span>TELEPON / WHATSAPP</span>
-                    <a href="https://wa.me/628517088221" target="_blank" rel="noopener noreferrer">
-                        +62 811-2884-1991 <b>↗</b>
-                    </a>
+                    <div class="contact-phone-list">
+                        <a href="https://wa.me/6281128851991" target="_blank" rel="noopener noreferrer">
+                            0811-2885-1991 <b>↗</b>
+                        </a>
+                        <span>/</span>
+                        <a href="https://wa.me/6281128841991" target="_blank" rel="noopener noreferrer">
+                            0811-2884-1991 <b>↗</b>
+                        </a>
+                        <span>/</span>
+                        <a href="https://wa.me/6281128871991" target="_blank" rel="noopener noreferrer">
+                            0811-2887-1991 <b>↗</b>
+                        </a>
+                    </div>
                 </div>
 
                 <div>

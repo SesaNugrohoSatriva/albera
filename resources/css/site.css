@@ -1864,6 +1864,20 @@ a {
     background: var(--leaf-soft)
 }
 
+.whatsapp-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.contact-phone-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-weight:bold
+}
+
 @media(max-width:900px) {
     .wrap {
         width: min(calc(100% - 42px), 700px)
