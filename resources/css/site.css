@@ -1,3 +1,7 @@
+/* =========================================================
+    1. GLOBAL / BASE STYLES
+    Token warna dan tipografi, reset dasar, serta aturan umum halaman.
+    ========================================================= */
 :root {
     --forest: #163c2d;
     --deep: #102b21;
@@ -63,6 +67,10 @@ a {
     padding-block: 88px
 }
 
+/* =========================================================
+   2. HEADER / NAVBAR PUBLIK
+   Mengatur header desktop, identitas ALBERA, navigasi, dan dropdown.
+   ========================================================= */
 .site-header {
     height: 82px;
     position: absolute;
@@ -242,6 +250,10 @@ a {
     display: none
 }
 
+/* =========================================================
+   3. HERO SECTION
+   Menata banner pembuka homepage, gambar latar, overlay, dan kontennya.
+   ========================================================= */
 .hero {
     height: min(850px, 100svh);
     min-height: 690px;
@@ -281,6 +293,10 @@ a {
     animation: rise .8s both
 }
 
+/* =========================================================
+   4. LABEL, JUDUL, DAN TIPOGRAFI BERSAMA
+   Gaya eyebrow dan judul yang digunakan lintas halaman publik.
+   ========================================================= */
 .eyebrow {
     display: flex;
     align-items: center;
@@ -337,6 +353,7 @@ a {
     gap: 30px
 }
 
+/* Tombol dan tautan aksi untuk alur navigasi publik. */
 .button {
     min-height: 49px;
     display: inline-flex;
@@ -396,6 +413,7 @@ a {
     color: white
 }
 
+/* Animasi kemunculan bertahap untuk konten yang memakai class reveal. */
 .js .reveal {
     opacity: 0;
     transform: translateY(24px);
@@ -439,6 +457,10 @@ a {
     letter-spacing: .04em
 }
 
+/* =========================================================
+   5. ABOUT / TENTANG ALBERA
+   Menampilkan pengantar perusahaan dan gambar pada homepage.
+   ========================================================= */
 .intro-section {
     background: var(--paper);
     transition: background-color .45s ease;
@@ -502,6 +524,10 @@ a {
     object-fit: cover;
 }
 
+/* =========================================================
+   6. VISI DAN MISI
+   Menyusun pernyataan visi serta daftar misi dalam layout dua kolom.
+   ========================================================= */
 .vision-section {
     background: #e9eddf;
     transition: background-color .45s ease
@@ -562,6 +588,10 @@ a {
     line-height: 1.7
 }
 
+/* =========================================================
+   7. PRODUK
+   Mengatur grid katalog, visual produk, metadata, dan placeholder.
+   ========================================================= */
 .products-section {
     background: var(--white);
     transition: background-color .45s ease
@@ -713,6 +743,10 @@ a {
     background: var(--clay)
 }
 
+/* =========================================================
+   8. NILAI / KUALITAS
+   Menyajikan prinsip kerja ALBERA sebagai daftar berurutan.
+   ========================================================= */
 .values-section {
     color: white;
     background: var(--forest);
@@ -776,12 +810,19 @@ a {
     font-size: 16px
 }
 
+/* =========================================================
+   9. MANAGEMENT BOARD
+   Area homepage yang menampilkan bagan organisasi statis.
+   ========================================================= */
 .directors-section {
     background: var(--paper);
     transition: background-color .45s ease
 }
 
-
+/* =========================================================
+    10. ARTIKEL / BERITA
+    Kartu artikel, gambar sampul, placeholder, dan ringkasan konten.
+    ========================================================= */
 .articles-section {
     background: #fffefa;
     transition: background-color .45s ease
@@ -893,6 +934,10 @@ a {
     line-height: 1.6
 }
 
+/* =========================================================
+   11. CONTACT / AJAKAN BERKONTAK
+   Menata ajakan konsultasi dan tombol kontak pada halaman publik.
+   ========================================================= */
 .contact-section {
     padding: 64px 0;
     color: white;
@@ -921,6 +966,10 @@ a {
     flex: 0 0 auto
 }
 
+/* =========================================================
+   12. FOOTER
+   Mengatur kolom informasi, tautan, dan akun media sosial.
+   ========================================================= */
 .site-footer {
     padding-top: 72px;
     color: white;
@@ -997,7 +1046,10 @@ a {
 }
 
 
-
+/* =========================================================
+   13. WIDGET DAN STATUS KONTEN
+   Tombol WhatsApp mengambang serta tampilan untuk konten kosong.
+   ========================================================= */
 .whatsapp-float {
     min-height: 54px;
     position: fixed;
@@ -1054,6 +1106,10 @@ a {
     font-size: 13px
 }
 
+/* =========================================================
+   14. HALAMAN DETAIL PRODUK
+   Breadcrumb, foto, spesifikasi, dan rekomendasi produk terkait.
+   ========================================================= */
 .detail-hero {
     padding: 116px 0 90px;
     background: var(--paper)
@@ -1166,7 +1222,7 @@ a {
     font-weight: 600
 }
 
-
+/* Produk lain yang ditampilkan sebagai lanjutan dari detail produk. */
 .related-section {
     background: var(--white)
 }
@@ -1180,6 +1236,10 @@ a {
     color: #778c58
 }
 
+/* =========================================================
+   15. DETAIL ARTIKEL
+   Mengatur judul, byline, sampul, isi artikel, dan penutupnya.
+   ========================================================= */
 .article-detail {
     padding-top: 116px;
     background: var(--paper)
@@ -1317,6 +1377,10 @@ a {
     font: 500 22px var(--serif)
 }
 
+/* =========================================================
+   16. KEYFRAMES
+   Animasi masuk konten dan gerak halus gambar hero.
+   ========================================================= */
 @keyframes rise {
     from {
         opacity: 0;
@@ -1335,6 +1399,10 @@ a {
     }
 }
 
+/* =========================================================
+    17. ADMIN / DASHBOARD
+    Kerangka area kerja internal, sidebar, ringkasan, tabel, dan form.
+    ========================================================= */
 /* Admin workspace */
 .admin-body {
     min-height: 100vh;
@@ -1347,6 +1415,7 @@ a {
     grid-template-columns: 238px 1fr
 }
 
+/* Navigasi samping admin dan identitas perusahaan. */
 .admin-sidebar {
     position: sticky;
     top: 0;
@@ -1436,6 +1505,7 @@ a {
     margin-top: 10px
 }
 
+/* Header akun dan area utama untuk halaman admin. */
 .admin-main {
     min-width: 0
 }
@@ -1479,6 +1549,7 @@ a {
     padding: 43px 42px 60px
 }
 
+/* Judul halaman, tombol tindakan, pesan status, dan ringkasan dashboard. */
 .admin-heading {
     display: flex;
     justify-content: space-between;
@@ -1603,6 +1674,7 @@ a {
     font: 500 38px/1 var(--serif)
 }
 
+/* Panel dan tabel yang digunakan untuk mengelola data admin. */
 .admin-panel {
     overflow: hidden;
     border: 1px solid #e0e9e0;
@@ -1718,6 +1790,7 @@ a {
     border-top: 1px solid #edf0e9
 }
 
+/* Form input untuk pengelolaan konten internal. */
 .admin-form {
     max-width: 780px;
     padding: 24px;
@@ -1828,6 +1901,7 @@ a {
     font-weight: 700
 }
 
+/* Tautan cepat menuju modul produk dan artikel dari dashboard. */
 .admin-dashboard-section-head {
     display: flex;
     justify-content: space-between;
@@ -1910,6 +1984,10 @@ a {
     font-weight:bold
 }
 
+/* =========================================================
+   18. RESPONSIVE - TABLET
+   Menyesuaikan navigasi, grid halaman, detail, dan admin pada layar sedang.
+   ========================================================= */
 @media(max-width:900px) {
     .wrap {
         width: min(calc(100% - 42px), 700px)
@@ -2102,6 +2180,10 @@ a {
     }
 }
 
+/* =========================================================
+    19. RESPONSIVE - MOBILE
+    Menyusun komponen publik dan admin agar muat pada layar ponsel.
+    ========================================================= */
 @media(max-width:620px) {
     .wrap {
         width: calc(100% - 38px)
@@ -2427,6 +2509,7 @@ a {
     }
 }
 
+/* Hormati preferensi aksesibilitas untuk mengurangi gerakan animasi. */
 @media(prefers-reduced-motion:reduce) {
 
     *,
@@ -2445,6 +2528,10 @@ a {
     }
 }
 
+/* =========================================================
+    20. KERANGKA HALAMAN KOLEKSI
+    Header tetap, status navigasi, dan intro bersama halaman publik.
+    ========================================================= */
 .site-header {
     position: fixed;
     inset: 0 0 auto;
@@ -2471,6 +2558,10 @@ a {
 }
 
 
+/* =========================================================
+    21. HALAMAN MANAGEMENT BOARD
+    Aturan khusus bagan organisasi statis dan layout halaman Direksi.
+    ========================================================= */
 .management-page .page-intro>p {
     max-width: 680px
 }
@@ -2608,6 +2699,10 @@ a {
 .management-page .management-team-connector {
     display: none
 }
+/* =========================================================
+    22. KOMPONEN HALAMAN KOLEKSI
+    Breadcrumb, judul, pagination, dan tautan antar katalog.
+    ========================================================= */
 .page-intro .detail-breadcrumb {
     margin-bottom: 35px
 }
@@ -2629,6 +2724,7 @@ a {
     font-size: 13px
 }
 
+/* Penyesuaian konten yang hanya digunakan halaman Visi dan Misi. */
 .vision-mission-page .page-intro {
     padding-bottom: 55px
 }
@@ -2731,6 +2827,10 @@ a {
     font: 600 22px/1.2 var(--serif)
 }
 
+/* =========================================================
+    23. HALAMAN ABOUT
+    Mengatur pengantar, gambar, visi, dan prinsip pada profil perusahaan.
+    ========================================================= */
 .about-page-content {
     display: grid;
     grid-template-columns: 1.04fr .96fr;
@@ -2817,6 +2917,10 @@ a {
     line-height: 1.65
 }
 
+/* =========================================================
+    24. HALAMAN CONTACT
+    Menyusun informasi kontak dan tautan komunikasi perusahaan.
+    ========================================================= */
 .contact-page-grid {
     display: grid;
     grid-template-columns: .9fr 1.1fr;
@@ -2891,6 +2995,10 @@ a {
     font-weight: 700
 }
 
+/* =========================================================
+    25. RESPONSIVE - HALAMAN TABLET
+    Penyesuaian intro, About, Contact, dan prinsip pada layar sedang.
+    ========================================================= */
 @media(max-width:900px) {
     .page-intro {
         padding-top: 110px
@@ -2919,6 +3027,10 @@ a {
     }
 }
 
+/* =========================================================
+    26. RESPONSIVE - HALAMAN MOBILE
+    Merapikan breadcrumb, detail, About, dan Contact pada ponsel.
+    ========================================================= */
 @media(max-width:620px) {
     .site-header {
         height: 72px
