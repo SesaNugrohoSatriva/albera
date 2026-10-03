@@ -3,7 +3,6 @@
 namespace Tests\Feature;
 
 use App\Models\Article;
-use App\Models\Director;
 use App\Models\Product;
 use App\Models\User;
 use Database\Seeders\AdminUserSeeder;
@@ -85,14 +84,10 @@ class CompanyProfileTest extends TestCase
         $this->get(route('admin.products.create'))->assertOk();
         $this->get(route('admin.articles.index'))->assertOk();
         $this->get(route('admin.articles.create'))->assertOk();
-        $this->get(route('admin.directors.index'))->assertOk();
-        $this->get(route('admin.directors.create'))->assertOk();
     }
 
     public function test_public_collection_pages_render_and_home_links_to_them(): void
     {
-        Director::create(['name' => 'Fahmi Rosyadi', 'position' => 'Direktur', 'sort_order' => 1]);
-
         $this->get(route('products.index'))->assertOk();
         $this->get(route('articles.index'))->assertOk();
         $this->get(route('directors.index'))->assertOk()->assertSee('Fahmi Rosyadi');
@@ -107,12 +102,6 @@ class CompanyProfileTest extends TestCase
 
     public function test_public_directors_page_uses_static_management_board_without_database_records(): void
     {
-        Director::create([
-            'name' => 'Database Person',
-            'position' => 'Database Role',
-            'sort_order' => 99,
-        ]);
-
         $this->get(route('directors.index'))
             ->assertOk()
             ->assertSee('MANAGEMENT BOARD')
@@ -122,8 +111,6 @@ class CompanyProfileTest extends TestCase
             ->assertSee('Deby Hastono')
             ->assertSee('Muslih Riza')
             ->assertSee('Amin Luthfy')
-            ->assertDontSee('Database Person')
-            ->assertDontSee('director-portrait')
             ->assertDontSee('collection-pagination');
     }
 

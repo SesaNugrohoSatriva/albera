@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
-use App\Models\Director;
 use App\Models\Product;
 
 class PublicSiteController extends Controller
@@ -13,7 +12,6 @@ class PublicSiteController extends Controller
         return view('public.home', [
             'products' => Product::where('is_published', true)->latest()->take(2)->get(),
             'articles' => Article::where('is_published', true)->latest('published_at')->take(3)->get(),
-            'directors' => Director::orderBy('sort_order')->orderBy('name')->take(4)->get(),
         ]);
     }
 

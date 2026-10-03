@@ -74,4 +74,4 @@ Jika database sudah berisi data company profile, jalankan seeder admin saja:
 php artisan db:seed --class=AdminUserSeeder
 ```
 
-Masuk melalui `/login`; akun admin akan diarahkan ke `/admin` untuk mengelola produk, artikel, dan direksi.
+Masuk melalui `/login`; akun admin akan diarahkan ke `/admin` untuk mengelola produk dan artikel.

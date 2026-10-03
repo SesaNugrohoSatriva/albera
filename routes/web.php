@@ -1,12 +1,10 @@
 <?php
 
 use App\Http\Controllers\Admin\ArticleController as AdminArticleController;
-use App\Http\Controllers\Admin\DirectorController as AdminDirectorController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PublicSiteController;
 use App\Models\Article;
-use App\Models\Director;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
@@ -46,11 +44,9 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('/', fn () => view('admin.dashboard', [
         'productCount' => Product::count(),
         'articleCount' => Article::count(),
-        'directorCount' => Director::count(),
     ]))->name('dashboard');
     Route::resource('products', AdminProductController::class)->except('show');
     Route::resource('articles', AdminArticleController::class)->except('show');
-    Route::resource('directors', AdminDirectorController::class)->except('show');
 });
 
 require __DIR__.'/auth.php';

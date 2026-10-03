@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Article;
-use App\Models\Director;
 use App\Models\Product;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -66,18 +65,6 @@ class DatabaseSeeder extends Seeder
             'is_published' => true,
             'published_at' => now()->subDays(7),
         ]);
-
-        foreach ([
-            ['Fahmi Rosyadi', 'Direktur', 1],
-            ['Deby Hastono', 'Manajer Operasional', 2],
-            ['Muslih Riza', 'Technical Service', 3],
-            ['Amin Luthfy', 'Admin / Finance', 4],
-        ] as [$name, $position, $sortOrder]) {
-            Director::firstOrCreate(['name' => $name], [
-                'position' => $position,
-                'sort_order' => $sortOrder,
-            ]);
-        }
 
         $this->call(LoginUserSeeder::class);
     }

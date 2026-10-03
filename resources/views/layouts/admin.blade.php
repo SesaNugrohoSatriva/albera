@@ -18,7 +18,6 @@
                 <a class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}" href="{{ route('admin.dashboard') }}"><span>01</span>Ringkasan</a>
                 <a class="{{ request()->routeIs('admin.products.*') ? 'active' : '' }}" href="{{ route('admin.products.index') }}"><span>02</span>Produk</a>
                 <a class="{{ request()->routeIs('admin.articles.*') ? 'active' : '' }}" href="{{ route('admin.articles.index') }}"><span>03</span>Artikel</a>
-                <a class="{{ request()->routeIs('admin.directors.*') ? 'active' : '' }}" href="{{ route('admin.directors.index') }}"><span>04</span>Direksi</a>
             </nav>
             <div class="admin-sidebar-bottom">
                 <a href="{{ route('home') }}" target="_blank">Lihat situs <span>↗</span></a>
