@@ -11,7 +11,7 @@
     @vite(['resources/css/app.css', 'resources/css/site.css', 'resources/js/app.js'])
 </head>
 <body class="site-body">
-    <header class="site-header" x-data="{ open: false }">
+    <header class="site-header" x-data="{ open: false, aboutMenuOpen: false }" @keydown.escape.window="aboutMenuOpen = false">
         <div class="site-nav wrap">
             <a class="brand" href="{{ route('home') }}" aria-label="ALBERA beranda">
                 <img class="brand-logo" src="{{ Vite::asset('resources/img/logo.png') }}" alt="ALBERA">
@@ -25,9 +25,22 @@
             </button>
             <nav class="site-menu" :class="{ 'is-open': open }" aria-label="Navigasi utama">
                 <a class="{{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Beranda</a>
-                <a class="{{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">Tentang</a>
+                <div class="nav-dropdown" @click.outside="aboutMenuOpen = false">
+                    <button
+                        class="nav-dropdown-toggle {{ request()->routeIs('about', 'vision-mission', 'directors.*') ? 'active' : '' }}"
+                        type="button"
+                        @click="aboutMenuOpen = !aboutMenuOpen"
+                        aria-controls="about-nav-menu"
+                        :aria-expanded="aboutMenuOpen.toString()">
+                        Tentang <span aria-hidden="true">▾</span>
+                    </button>
+                    <div class="nav-dropdown-menu" id="about-nav-menu" x-cloak x-show="aboutMenuOpen">
+                        <a class="{{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}" @click="open = false; aboutMenuOpen = false" @if (request()->routeIs('about')) aria-current="page" @endif>Tentang ALBERA</a>
+                        <a class="{{ request()->routeIs('vision-mission') ? 'active' : '' }}" href="{{ route('vision-mission') }}" @click="open = false; aboutMenuOpen = false" @if (request()->routeIs('vision-mission')) aria-current="page" @endif>Visi &amp; Misi</a>
+                        <a class="{{ request()->routeIs('directors.*') ? 'active' : '' }}" href="{{ route('directors.index') }}" @click="open = false; aboutMenuOpen = false" @if (request()->routeIs('directors.*')) aria-current="page" @endif>Direksi</a>
+                    </div>
+                </div>
                 <a class="{{ request()->routeIs('products.*') ? 'active' : '' }}" href="{{ route('products.index') }}">Produk</a>
-                <a class="{{ request()->routeIs('directors.*') ? 'active' : '' }}" href="{{ route('directors.index') }}">Direksi</a>
                 <a class="{{ request()->routeIs('articles.*') ? 'active' : '' }}" href="{{ route('articles.index') }}">Artikel</a>
                 <a class="nav-contact {{ request()->routeIs('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Hubungi kami <span aria-hidden="true">↗</span></a>
             </nav>

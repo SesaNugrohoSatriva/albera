@@ -156,6 +156,71 @@ a {
     opacity: 1
 }
 
+.site-header [x-cloak] {
+    display: none !important
+}
+
+.nav-dropdown {
+    position: relative
+}
+
+.nav-dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    border: 0;
+    color: inherit;
+    background: transparent;
+    font: inherit;
+    opacity: .84;
+    cursor: pointer;
+    transition: color .2s, opacity .2s
+}
+
+.nav-dropdown-toggle:hover,
+.nav-dropdown-toggle.active {
+    color: var(--leaf);
+    opacity: 1
+}
+
+.nav-dropdown-toggle span {
+    color: var(--leaf);
+    transition: transform .2s
+}
+
+.nav-dropdown-toggle[aria-expanded="true"] span {
+    transform: rotate(180deg)
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: -16px;
+    z-index: 30;
+    display: grid;
+    min-width: 205px;
+    padding: 8px;
+    border: 1px solid rgb(255 255 255 / 12%);
+    background: var(--deep);
+    box-shadow: 0 12px 28px rgb(8 24 17 / 22%)
+}
+
+.nav-dropdown-menu a {
+    padding: 11px 12px;
+    color: var(--white);
+    font-size: 12px;
+    opacity: .82;
+    transition: color .2s, background .2s, opacity .2s
+}
+
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu a.active {
+    color: var(--leaf);
+    background: rgb(255 255 255 / 6%);
+    opacity: 1
+}
+
 .nav-contact {
     padding: 11px 16px;
     border: 1px solid rgb(255 255 255 / 40%);
@@ -1941,6 +2006,28 @@ a {
         border-bottom: 1px solid rgb(255 255 255 / 12%)
     }
 
+    .site-menu .nav-dropdown-toggle {
+        width: 100%;
+        justify-content: space-between;
+        padding: 12px 4px;
+        border-bottom: 1px solid rgb(255 255 255 / 12%);
+        text-align: left
+    }
+
+    .nav-dropdown-menu {
+        position: static;
+        min-width: 0;
+        padding: 0 0 0 12px;
+        border: 0;
+        background: rgb(255 255 255 / 4%);
+        box-shadow: none
+    }
+
+    .nav-dropdown-menu a {
+        padding: 11px 12px;
+        border-bottom: 1px solid rgb(255 255 255 / 10%)
+    }
+
     .site-menu .nav-contact {
         margin-top: 12px;
         padding-inline: 12px;
@@ -2417,6 +2504,18 @@ a {
     margin: 0;
     color: var(--muted);
     font-size: 13px
+}
+
+.vision-mission-page .page-intro {
+    padding-bottom: 55px
+}
+
+.vision-mission-page .vision-mission-content {
+    padding-block: 78px 96px
+}
+
+.vision-mission-page .vision-layout {
+    align-items: start
 }
 
 .collection-content {

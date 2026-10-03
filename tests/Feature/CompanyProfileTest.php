@@ -105,6 +105,35 @@ class CompanyProfileTest extends TestCase
             ->assertSee(route('directors.index'));
     }
 
+    public function test_vision_and_mission_has_its_own_page_and_about_keeps_its_other_sections(): void
+    {
+        $this->get(route('vision-mission'))
+            ->assertOk()
+            ->assertSee('Beranda')
+            ->assertSee('Visi &amp; Misi', false)
+            ->assertSee('Menjadi perusahaan agrokimia yang unggul, berdaya saing, dan berkontribusi pada pembangunan')
+            ->assertSee('Mengembangkan solusi yang memperhatikan kesehatan tanah dan lingkungan.');
+
+        $this->get(route('about'))
+            ->assertOk()
+            ->assertSee('Siapa kami')
+            ->assertSee('Prinsip kami')
+            ->assertDontSee('Menjadi perusahaan agrokimia yang unggul, berdaya saing');
+    }
+
+    public function test_about_dropdown_links_to_about_vision_mission_and_directors(): void
+    {
+        $response = $this->get(route('vision-mission'));
+
+        $response->assertOk()
+            ->assertSee(route('about'))
+            ->assertSee(route('vision-mission'))
+            ->assertSee(route('directors.index'))
+            ->assertSee('nav-dropdown-toggle active', false)
+            ->assertSee('aria-current="page"', false)
+            ->assertDontSee('>Direksi</a></nav>', false);
+    }
+
     public function test_admin_seeder_creates_login_account_from_config(): void
     {
         Config::set('albera.admin.name', 'Admin ALBERA');

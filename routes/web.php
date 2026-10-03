@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Storage;
 
 Route::get('/', [PublicSiteController::class, 'index'])->name('home');
 Route::get('/tentang-kami', [PublicSiteController::class, 'about'])->name('about');
+Route::get('/visi-misi', [PublicSiteController::class, 'visionMission'])->name('vision-mission');
 Route::get('/produk', [PublicSiteController::class, 'products'])->name('products.index');
 Route::get('/direksi', [PublicSiteController::class, 'directors'])->name('directors.index');
 Route::get('/artikel', [PublicSiteController::class, 'articles'])->name('articles.index');

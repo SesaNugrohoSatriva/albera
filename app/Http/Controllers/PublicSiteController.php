@@ -22,6 +22,11 @@ class PublicSiteController extends Controller
         return view('public.about');
     }
 
+    public function visionMission()
+    {
+        return view('public.vision-mission');
+    }
+
     public function products()
     {
         return view('public.products.index', [
