@@ -241,54 +241,62 @@
         </div>
     </section>
 
-    <section class="directors-section section-pad" id="direksi">
+    <section class="directors-section section-pad management-page" id="direksi">
         <div class="wrap">
             <div class="section-heading split-heading reveal">
                 <div>
                     <div class="eyebrow">
-                        Di balik ALBERA
+                        Management Board
                     </div>
 
                     <h2>
-                        Orang-orang yang<br>
-                        <em>menumbuhkan ide.</em>
+                        Tim yang menggerakkan ALBERA.
                     </h2>
                 </div>
             </div>
 
-            @if($directors->isNotEmpty())
-                <div class="director-grid">
-                    @foreach($directors as $director)
-                        <article class="director-tile reveal">
-                            <div class="director-portrait">
-                                @if($director->photo)
-                                    <img src="{{ route('media', ['path' => $director->photo]) }}" alt="{{ $director->name }}" loading="lazy">
-                                @else
-                                    <span>
-                                        {{ collect(explode(' ', $director->name))->map(fn($part) => mb_substr($part, 0, 1))->take(2)->implode('') }}
-                                    </span>
-                                @endif
-                            </div>
+            <div class="management-panel">
+                <div class="management-panel-heading">Struktur Organisasi</div>
 
-                            <span>{{ $director->position }}</span>
-                            <h3>{{ $director->name }}</h3>
+                <div class="management-chart" aria-label="Struktur Management Board ALBERA">
+                    <article class="management-card management-card-director">
+                        <h2>Fahmi Rosyadi</h2>
+                        <p>Direktur</p>
+                    </article>
 
-                            @if($director->bio)
-                                <p>{{ $director->bio }}</p>
-                            @endif
+                    <div class="management-connector" aria-hidden="true"></div>
+
+                    <article class="management-card management-card-manager">
+                        <h2>Deby Hastono</h2>
+                        <p>Manajer Operasional</p>
+                    </article>
+
+                    <div class="management-branch" aria-hidden="true">
+                        <span class="management-branch-stem"></span>
+                        <span class="management-branch-line"></span>
+                        <span class="management-branch-drop management-branch-drop-left"></span>
+                        <span class="management-branch-drop management-branch-drop-right"></span>
+                    </div>
+
+                    <div class="management-team">
+                        <article class="management-card">
+                            <h2>Muslih Riza</h2>
+                            <p>Technical Service</p>
                         </article>
-                    @endforeach
+
+                        <div class="management-team-connector" aria-hidden="true"></div>
+
+                        <article class="management-card">
+                            <h2>Amin Luthfy</h2>
+                            <p>Admin/Finance</p>
+                        </article>
+                    </div>
                 </div>
-            @else
-                <div class="empty-content">
-                    <span>02</span>
-                    <p>Profil tim ALBERA akan segera diperbarui.</p>
-                </div>
-            @endif
+            </div>
 
             <div class="collection-more">
                 <a class="text-link" href="{{ route('directors.index') }}">
-                    Lihat seluruh direksi <span>↗</span>
+                    Lihat struktur organisasi <span>↗</span>
                 </a>
             </div>
         </div>
