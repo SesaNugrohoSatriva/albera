@@ -60,6 +60,7 @@
                     <a href="https://www.threads.com/@albera.official" target="_blank" rel="noopener noreferrer">Threads <span>↗</span></a>
                     <a href="https://www.tiktok.com/@alberaofficial?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">TikTok <span>↗</span></a>
                     <a href="https://www.facebook.com/share/1FVvQ5YWyT/" target="_blank" rel="noopener noreferrer">Facebook <span>↗</span></a>
+                    <a href="https://www.instagram.com/albera.official?stkn=MTN0bzE2ZDNjN2Fzcw==" target="_blank" rel="noopener noreferrer">Instagram <span>↗</span></a>
                 </div>
             </div>
             <div class="footer-column">

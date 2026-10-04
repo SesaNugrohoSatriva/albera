@@ -106,7 +106,12 @@
 
                         <a href="https://www.facebook.com/share/1FVvQ5YWyT/" target="_blank" rel="noopener noreferrer">
                             Facebook ↗
+                        </a> 
+                        <a href=" https://www.instagram.com/albera.official?stkn=MTN0bzE2ZDNjN2Fzcw==" target="_blank"
+                            rel="noopener noreferrer">
+                            Instagram ↗
                         </a>
+
                     </div>
                 </div>
             </div>
