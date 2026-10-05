@@ -25,7 +25,7 @@
 
         <div class="wrap collection-content management-content">
             <div class="management-panel">
-                <div class="management-panel-heading">Struktur Organisasi</div>
+                <div class="management-panel-heading">Management Board</div>
 
                 <div class="management-chart" aria-label="Struktur Management Board">
                     <article class="management-card management-card-director">
