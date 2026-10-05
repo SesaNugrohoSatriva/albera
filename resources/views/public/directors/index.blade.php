@@ -16,7 +16,7 @@
                 MANAGEMENT BOARD
             </div>
 
-            <h1>P.T. Agro Lestari Berkah Nusantara</h1>
+            <h1><span style="color: #2f3192;">P.T. Agro Lestari Berkah Nusantara</span></h1>
         </div>
 
         <div class="wrap collection-content management-content">
