@@ -53,7 +53,7 @@
         <div class="wrap footer-main">
             <div class="footer-about">
                 <a class="brand brand-light" href="{{ route('home') }}">
-                    <img class="brand-logo" src="{{ Vite::asset('resources/img/logo.png') }}" alt="ALBERA">
+                    <img class="brand-logo" src="{{ Vite::asset('resources/img/logo.png') }}" alt="ALBERA" style="width: 46px; height: 46px; border-radius: 50%; object-fit: cover; object-position: center; background: #fff;">
                 </a>
                 <p>Mendukung produktivitas pertanian melalui solusi nutrisi tanaman yang berkualitas, konsisten, dan bertanggung jawab.</p>
                 <div class="socials" aria-label="Media sosial">
