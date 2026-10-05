@@ -125,6 +125,7 @@
             @if($products->isNotEmpty())
                 <div class="product-grid">
                     @foreach($products as $product)
+                        @php($formattedProductName = str_replace('®', '<sup>®</sup>', preg_replace('/\s*\*R\b/u', '<sup>®</sup>', preg_replace('/\bNPK\s+\d+(?:-\d+)*/u', '<span class="product-name-formula">$0</span>', e($product->name)))))
                         <article class="product-tile reveal">
                             <a class="product-visual" href="{{ route('products.show', $product->slug) }}">
                                 @if($product->image)
@@ -132,7 +133,7 @@
                                 @else
                                     <div class="product-placeholder">
                                         <span>ALBERA</span>
-                                        <strong>{{ $product->name }}</strong>
+                                        <strong>{!! $formattedProductName !!}</strong>
                                         <small>
                                             NPK {{ $product->nitrogen }}-{{ $product->phosphorus }}-{{ $product->potassium }}
                                         </small>
@@ -147,7 +148,7 @@
 
                             <h3>
                                 <a href="{{ route('products.show', $product->slug) }}">
-                                    {{ $product->name }}
+                                    {!! $formattedProductName !!}
                                 </a>
                             </h3>
 

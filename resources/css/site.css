@@ -695,7 +695,25 @@ a {
 
 .product-placeholder strong {
     max-width: 90%;
-    font: 600 34px/1.05 var(--serif)
+    font: 600 34px/1.05 Georgia, serif
+}
+
+.product-tile h2 sup,
+.product-tile h3 sup,
+.product-placeholder strong sup,
+.detail-product-copy h1 sup,
+.detail-breadcrumb sup {
+    font-size: .65em;
+    line-height: 0;
+    vertical-align: baseline;
+    position: relative;
+    top: -.35em
+}
+
+.product-name-formula {
+    font-family: var(--sans);
+    font-style: normal;
+    font-weight: 400
 }
 
 .product-placeholder small {
@@ -716,9 +734,7 @@ a {
 }
 .product-tile h2 {
     margin: 8px 0;
-    font-family: Georgia, serif;
-    font-weight: bold;
-    line-height: 1.2;
+    font: 500 27px/1.2 Georgia, serif;
 }
 
 .product-tile h2 a {
@@ -2855,7 +2871,7 @@ a {
 
 .page-intro+.collection-content .product-tile h2 {
     margin: 8px 0;
-    font: 600 27px/1.2 var(--serif)
+    font: 500 27px/1.2 Georgia, serif
 }
 
 .page-intro+.collection-content .article-info h2 {

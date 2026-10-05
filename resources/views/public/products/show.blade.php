@@ -4,13 +4,14 @@
 ])
 
 @section('content')
+    @php($formattedProductName = str_replace('®', '<sup>®</sup>', preg_replace('/\s*\*R\b/u', '<sup>®</sup>', preg_replace('/\bNPK\s+\d+(?:-\d+)*/u', '<span class="product-name-formula">$0</span>', e($product->name)))))
     <section class="detail-hero">
         <div class="wrap detail-breadcrumb">
             <a href="{{ route('home') }}">Beranda</a>
             <span>/</span>
             <a href="{{ route('home') }}#produk">Produk</a>
             <span>/</span>
-            <span>{{ $product->name }}</span>
+            <span>{!! $formattedProductName !!}</span>
         </div>
 
         <div class="wrap product-detail-grid">
@@ -20,7 +21,7 @@
                 @else
                     <div class="product-placeholder">
                         <span>ALBERA</span>
-                        <strong>{{ $product->name }}</strong>
+                        <strong>{!! $formattedProductName !!}</strong>
                         <small>
                             NPK {{ $product->nitrogen }}-{{ $product->phosphorus }}-{{ $product->potassium }}
                         </small>
@@ -33,7 +34,7 @@
                     {{ $product->category }}
                 </div>
 
-                <h1>{{ $product->name }}</h1>
+                <h1>{!! $formattedProductName !!}</h1>
 
                 <p class="lead">
                     {{ $product->description }}
@@ -70,7 +71,7 @@
                 </dl>
 
                 <a class="button button-green"
-                    href="https://wa.me/6281128851991?text={{ urlencode('Halo ALBERA, saya ingin bertanya tentang ' . $product->name . '.') }}"
+                    href="https://wa.me/6281128851991?text={{ urlencode('Halo ALBERA, saya ingin bertanya tentang ' . str_replace('*R', '®', $product->name) . '.') }}"
                     target="_blank" rel="noopener noreferrer">
                     Tanyakan produk ini <span>↗</span>
                 </a>
@@ -91,6 +92,7 @@
 
                 <div class="product-grid">
                     @foreach($relatedProducts as $related)
+                        @php($formattedRelatedName = str_replace('®', '<sup>®</sup>', preg_replace('/\s*\*R\b/u', '<sup>®</sup>', preg_replace('/\bNPK\s+\d+(?:-\d+)*/u', '<span class="product-name-formula">$0</span>', e($related->name)))))
                         <article class="product-tile">
                             <a class="product-visual" href="{{ route('products.show', $related->slug) }}">
                                 @if($related->image)
@@ -98,7 +100,7 @@
                                 @else
                                     <div class="product-placeholder">
                                         <span>ALBERA</span>
-                                        <strong>{{ $related->name }}</strong>
+                                        <strong>{!! $formattedRelatedName !!}</strong>
                                         <small>
                                             NPK {{ $related->nitrogen }}-{{ $related->phosphorus }}-{{ $related->potassium }}
                                         </small>
@@ -113,7 +115,7 @@
 
                             <h3>
                                 <a href="{{ route('products.show', $related->slug) }}">
-                                    {{ $related->name }}
+                                    {!! $formattedRelatedName !!}
                                 </a>
                             </h3>
 
