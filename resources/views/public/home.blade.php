@@ -33,11 +33,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="hero-bottom wrap">
-            <span>Inovasi untuk tanah yang lebih hidup</span>
-            <span>Indonesia · Pertanian berkelanjutan</span>
-        </div>
     </section>
 
     <section class="intro-section section-pad" id="tentang">
