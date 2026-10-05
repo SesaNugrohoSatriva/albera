@@ -695,7 +695,7 @@ a {
 
 .product-placeholder strong {
     max-width: 90%;
-    font: 600 34px/1.05 Georgia, serif
+    font: 700 34px/1.05 Georgia, serif
 }
 
 .product-tile h2 sup,
@@ -713,7 +713,7 @@ a {
 .product-name-formula {
     font-family: var(--sans);
     font-style: normal;
-    font-weight: 400
+    font-weight: 700
 }
 
 .product-placeholder small {
@@ -734,7 +734,7 @@ a {
 }
 .product-tile h2 {
     margin: 8px 0;
-    font: 500 27px/1.2 Georgia, serif;
+    font: 700 27px/1.2 Georgia, serif;
 }
 
 .product-tile h2 a {
@@ -743,7 +743,7 @@ a {
 
 .product-tile h3 {
     margin: 8px 0;
-    font: 600 27px/1.2 var(--serif)
+    font: 700 27px/1.2 var(--serif)
 }
 
 .product-tile>p {
@@ -770,7 +770,7 @@ a {
 }
 .detail-product-copy h1 {
     font-family: Georgia, serif;
-    font-weight: 500;
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -781,7 +781,7 @@ a {
 .product-tile h3,
 .product-tile h3 a {
     font-family: Georgia, serif;
-    font-weight: 600;
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -2871,7 +2871,7 @@ a {
 
 .page-intro+.collection-content .product-tile h2 {
     margin: 8px 0;
-    font: 500 27px/1.2 Georgia, serif
+    font: 700 27px/1.2 Georgia, serif
 }
 
 .page-intro+.collection-content .article-info h2 {
