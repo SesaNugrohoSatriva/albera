@@ -71,8 +71,8 @@
 
                 <div>
                     <span>EMAIL</span>
-                    <a href="mailto:info@ptalbera.co.id">
-                        info@ptalbera.co.id <b>↗</b>
+                    <a href="mailto:agrolestariberkahnusantara@gmail.com">
+                        agrolestariberkahnusantara@gmail.com <b>↗</b>
                     </a>
                 </div>
 

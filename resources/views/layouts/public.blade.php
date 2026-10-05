@@ -78,7 +78,7 @@
                 <h2>Temui kami</h2>
                 <p>PT. Agro Lestari Berkah Nusantara</p>
                 <p>Indonesia</p>
-                <a href="mailto:info@ptalbera.co.id">info@ptalbera.co.id</a>
+                <a href="mailto:agrolestariberkahnusantara@gmail.com">agrolestariberkahnusantara@gmail.com</a>
                 <a href="https://wa.me/6281128851991" target="_blank" rel="noopener noreferrer">+62 811-2885-1991</a>
             </div>
         </div>
