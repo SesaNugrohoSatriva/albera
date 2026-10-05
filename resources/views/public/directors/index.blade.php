@@ -16,7 +16,7 @@
                 MANAGEMENT BOARD
             </div>
 
-            <h1 style="font-family: 'Arial Rounded MT Bold', 'Trebuchet MS', 'Segoe UI', sans-serif; font-weight: 700; font-size: 70px;">
+            <h1 style="font-family: 'Arial Rounded MT Bold', 'Trebuchet MS', 'Segoe UI', sans-serif; font-weight: 700; font-size: 65px;">
                 <span style="color: #2f3192;">P.T. Agro Lestari Berkah Nusantara</span>
             </h1>
         </div>
