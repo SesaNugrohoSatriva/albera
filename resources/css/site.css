@@ -716,8 +716,8 @@ a {
 }
 .product-tile h2 {
     margin: 8px 0;
-    font-family: "Bodoni Moda", serif;
-    font-weight: 600;
+    font-family: Georgia, serif;
+    font-weight: bold;
     line-height: 1.2;
 }
 
@@ -753,18 +753,18 @@ a {
     background: var(--clay)
 }
 .detail-product-copy h1 {
-    font-family: "Bodoni Moda", serif;
-    font-weight: 600;
+    font-family: Georgia, serif;
+    font-weight: 500;
     font-style: normal;
 }
 
 .related-title {
-    font-family: "Bodoni Moda", serif;
+    font-family: Georgia, serif;
 }
 
 .product-tile h3,
 .product-tile h3 a {
-    font-family: "Bodoni Moda", serif;
+    font-family: Georgia, serif;
     font-weight: 600;
     font-style: normal;
 }
