@@ -115,9 +115,9 @@
                 <div>
                     <div class="eyebrow">Produk pilihan</div>
 
-                    <h2>
-                        Nutrisi tepat,<br>
-                        <em>tumbuh optimal.</em>
+                    <h2 style="font-size: 50px;">
+                        Pupuk Premium (water soluble & siap serap)<br>
+                        <em style="font-style: normal;">lengkap dengan unsur mikro</em>
                     </h2>
                 </div>
             </div>
