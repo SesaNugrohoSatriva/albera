@@ -13,7 +13,7 @@
             </div>
 
             <div class="eyebrow">
-                Katalog ALBERA
+                Katalog
             </div>
 
             <h1>
@@ -22,7 +22,7 @@
             </h1>
 
             <p>
-                Kenali pilihan nutrisi tanaman ALBERA, formulasi N-P-K, kategori, dan kemasannya.
+                Pupuk Premium (water soluble & siap serap) lengkap dengan unsur mikro
             </p>
         </div>
 
