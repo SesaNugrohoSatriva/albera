@@ -28,7 +28,7 @@
                     </a>
 
                     <a class="text-link text-link-light" href="{{ route('about') }}">
-                        Kenali ALBERA <span>↗</span>
+                        Tentang Kami <span>↗</span>
                     </a>
                 </div>
             </div>
