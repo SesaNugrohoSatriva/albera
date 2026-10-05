@@ -714,6 +714,16 @@ a {
     font-weight: 700;
     letter-spacing: .1em
 }
+.product-tile h2 {
+    margin: 8px 0;
+    font-family: "Bodoni Moda", serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.product-tile h2 a {
+    font: inherit;
+}
 
 .product-tile h3 {
     margin: 8px 0;
@@ -741,6 +751,22 @@ a {
     height: 7px;
     border-radius: 50%;
     background: var(--clay)
+}
+.detail-product-copy h1 {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.related-title {
+    font-family: "Bodoni Moda", serif;
+}
+
+.product-tile h3,
+.product-tile h3 a {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 /* =========================================================
