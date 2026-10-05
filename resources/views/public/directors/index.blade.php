@@ -17,10 +17,6 @@
             </div>
 
             <h1>P.T. Agro Lestari Berkah Nusantara</h1>
-
-            <p>
-                Kenali tim yang mendukung operasional dan pengembangan PT. Agro Lestari Berkah Nusantara.
-            </p>
         </div>
 
         <div class="wrap collection-content management-content">
