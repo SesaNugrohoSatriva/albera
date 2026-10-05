@@ -18,7 +18,7 @@
 
             <h1>
                 Produk Unggulan<br>
-                <em>PT Agro Berkah Lestari Nusantara</em>
+                <em style="font-size: 60px;">PT Agro Berkah Lestari Nusantara</em>
             </h1>
 
             <p>
