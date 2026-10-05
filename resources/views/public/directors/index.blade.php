@@ -16,7 +16,9 @@
                 MANAGEMENT BOARD
             </div>
 
-            <h1><span style="color: #2f3192;">P.T. Agro Lestari Berkah Nusantara</span></h1>
+            <h1 style="font-family: 'Arial Rounded MT Bold', 'Trebuchet MS', 'Segoe UI', sans-serif; font-weight: 700;">
+                <span style="color: #2f3192;">P.T. Agro Lestari Berkah Nusantara</span>
+            </h1>
         </div>
 
         <div class="wrap collection-content management-content">
