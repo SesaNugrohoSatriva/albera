@@ -47,7 +47,7 @@ return [
     'about_us' => 'About Us',
     'modern_culture' => 'Go To Modern Culture',
     'grow_future' => 'Growing the future',
-    'company_intro' => 'PT. Agro Lestar Berkah Nusantara (Albera) is an agrochemical company providing modern agricultural solutions focused on innovation, productivity efficiency, and environmental sustainability.',
+    'company_intro' => 'PT. Agro Lestari Berkah Nusantara (Albera) is an agrochemical company providing modern agricultural solutions focused on innovation, productivity efficiency, and environmental sustainability.',
     'about_point_1' => 'A provider of high-quality fertilizers formulated to meet the specific needs of Indonesia’s agricultural and plantation sectors.',
     'about_point_2' => 'Committed to balancing productivity, cost efficiency, and soil conservation.',
     'about_point_3' => 'A trusted partner for farmers, distributors, and national agricultural businesses.',
