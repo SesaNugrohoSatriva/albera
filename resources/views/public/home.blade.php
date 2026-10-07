@@ -40,24 +40,24 @@
             <div class="intro-heading reveal">
                 <div class="eyebrow">Tentang ALBERA</div>
 
-                <h2>
-                    Merawat tanah.<br>
+                <h2 style="font-family: monsterat-arabic;">
+                    Go To Modern Culture<br>
                     <em>Menumbuhkan masa depan.</em>
                 </h2>
             </div>
 
             <div class="intro-copy reveal">
                 <p class="lead">
-                    Kami percaya pertanian yang produktif berawal dari keputusan yang tepat,
-                    produk yang terjaga, dan kemitraan yang tumbuh bersama.
+                    PT. Agro Lestar Berkah Nusantara (Albera) adalah perusahaan agrokimia 
+                    sebagai solusi pertanian modern yang berfokus pada inovasi efisiensi produktivitas kelestarian lingkungan 
                 </p>
 
-                <p>
-                    PT. Agro Lestari Berkah Nusantara (ALBERA) bergerak di bidang agrokimia
-                    dengan fokus pada pengembangan pupuk anorganik untuk kebutuhan pertanian.
-                    Kami hadir untuk menjadi mitra petani, distributor, dan pelaku usaha melalui
-                    solusi nutrisi tanaman yang relevan dan berkualitas.
-                </p>
+                <ul class="about-points">
+                    <li>Penyedia pupuk berkualitas tinggi yang diformulasikan sesuai kebutuhan spesifik sektor pertanian dan perkebunan Indonesia.</li>
+                    <li>Berkomitmen menjaga keseimbangan antara produktivitas, efisiensi biaya, dan kelestarian tanah</li>
+                    <li>Mitra terpercaya bagi petani, distributor, dan pelaku usaha pertanian nasional</li>
+                </ul>
+
             </div>
         </div>
 
@@ -73,8 +73,7 @@
                 <div class="eyebrow">Arah kami</div>
 
                 <h2>
-                    Bergerak dengan<br>
-                    <em>tujuan yang jelas.</em>
+                    Visi<br> dan <br>Misi
                 </h2>
             </div>
 
@@ -246,7 +245,7 @@
                     </div>
 
                     <h2>
-                        Tim yang menggerakkan ALBERA.
+                        PT Agro Lestari Berkah Nusantara
                     </h2>
                 </div>
             </div>

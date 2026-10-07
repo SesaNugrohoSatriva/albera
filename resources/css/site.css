@@ -474,7 +474,15 @@ a {
     display: grid;
     grid-template-columns: 1.03fr .97fr;
     gap: 9%;
-    align-items: end;
+    align-items: center;
+}
+
+.intro-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    min-height: 100%;
 }
 
 .intro-heading h2,
@@ -510,6 +518,36 @@ a {
     color: var(--ink);
     font: 500 22px/1.55 var(--serif);
 }
+
+.about-points {
+    display: grid;
+    gap: 16px;
+    margin: 26px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.about-points li {
+    position: relative;
+    padding-left: 30px;
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+    letter-spacing: .01em;
+}
+
+.about-points li::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #9bc66c, #456b3d);
+    box-shadow: 0 0 0 4px rgb(155 198 108 / 16%);
+}
+
 .intro-image-wrap {
     position: relative;
     height: 460px;
@@ -530,62 +568,119 @@ a {
    ========================================================= */
 .vision-section {
     background: #e9eddf;
-    transition: background-color .45s ease
+    transition: background-color .45s ease;
 }
-
-
 
 .vision-layout {
     display: grid;
-    grid-template-columns: .85fr 1.15fr;
-    gap: 10%
+    grid-template-columns: 1fr 1.6fr;
+    gap: 30px;
+    align-items: center;
 }
 
+/* Judul Kiri (Diperbesar & Digeser ke Kanan) */
+.vision-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 90px;
+    /* Menggeser posisi judul lebih ke kanan mendekati panah */
+}
+
+.eyebrow {
+    margin-bottom: 12px;
+    color: #1d2a1d;
+    font: 600 18px/1 sans-serif;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.vision-title h2 {
+    font-size: 54px;
+    /* Memperbesar ukuran teks Visi dan Misi */
+    line-height: 3;
+    /* Line spacing diatur agar tinggi kata 'Visi' pas sejajar dengan 'VISI' dan 'Misi' dengan 'MISI' */
+    color: #1d2a1d;
+    font-family: serif;
+    margin: 0;
+}
+
+/* Konten Kanan */
 .vision-content {
-    border-top: 1px solid #bdc8b5
+    border-top: none;
+    display: grid;
+    gap: 20px;
 }
 
 .vision-item {
+    position: relative;
     display: grid;
-    grid-template-columns: 96px 1fr;
-    gap: 20px;
+    grid-template-columns: 100px 1fr;
+    gap: 30px;
     align-items: center;
-    padding: 30px 0;
+    padding: 40px 0;
     border-bottom: 1px solid #bdc8b5;
-    transition: background-color .3s ease, padding-left .3s ease
+    transition: background-color .3s ease;
+    margin-top:75px
 }
 
 .vision-item>span {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-top: 0;
-    color: #74806c;
-    font: 600 18px/1 var(--sans);
-    letter-spacing: .16em
+    justify-content: flex-start;
+    color: #1d2a1d;
+    font: 600 18px/1 sans-serif;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+/* Kepala Panah */
+.vision-item>span::before {
+    content: "";
+    position: absolute;
+    right: calc(100% + 10px);
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 10px solid #1d2a1d;
+    transform: translateY(-50%);
+}
+
+/* Garis Panah Menghubungkan Tepat dari Visi/Misi Kiri ke Kanan */
+.vision-item>span::after {
+    content: "";
+    position: absolute;
+    right: calc(100% + 20px);
+    top: 50%;
+    width: 180px;
+    /* Panjang garis ditarik melintas dari kata Visi/Misi */
+    height: 2px;
+    background: #1d2a1d;
+    transform: translateY(-50%);
 }
 
 .vision-item>p {
     max-width: 650px;
     margin: 0;
     color: #334a3b;
-    font: 500 25px/1.5 var(--serif)
+    font: 500 25px/1.5 serif;
 }
 
 .mission-lines {
     display: grid;
-    gap: 18px
+    gap: 18px;
 }
 
 .mission-lines p {
-    /* display: grid; */
-    grid-template-columns: 40px minmax(0, 1fr);
-    align-items: start;
-    column-gap: 18px;
     margin: 0;
     color: #4f5c50;
     font-size: 16px;
-    line-height: 1.7
+    line-height: 1.7;
 }
 
 /* =========================================================
