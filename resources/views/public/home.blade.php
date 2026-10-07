@@ -153,7 +153,7 @@
                             </p>
 
                             <a class="text-link" href="{{ route('products.show', $product->slug) }}">
-                                Lihat detail <span>↗</span>
+                                {{ __('messages.view_detail') }} <span>↗</span>
                             </a>
                         </article>
                     @endforeach
@@ -167,13 +167,8 @@
 
             <div class="collection-more">
                 <a class="text-link" href="{{ route('products.index') }}">
-                    Lihat semua produk <span>↗</span>
+                    {{ __('messages.all_products') }} <span>↗</span>
                 </a>
-            </div>
-
-            <div class="product-note">
-                <span></span>
-                Gunakan sesuai rekomendasi agronomis dan petunjuk pada kemasan.
             </div>
         </div>
     </section>
@@ -182,7 +177,7 @@
         <div class="wrap values-layout">
             <div class="values-lead reveal">
                 <h2>
-                    <em>Komitmen</em>
+                    <em>{{ __('messages.commitment') }}</em>
                 </h2>
             </div>
 
@@ -191,8 +186,8 @@
                     <span>01</span>
 
                     <div>
-                        <h3>Kualitas</h3>
-                        <p>Menghadirkan produk agrokimia standar tinggi yang teruji memberikan manfaat nyata di lapangan.
+                        <h3>{{ __('messages.value_quality_title') }}</h3>
+                        <p>{{ __('messages.value_quality_text') }}
                         </p>
                     </div>
                 </article>
@@ -201,8 +196,8 @@
                     <span>02</span>
 
                     <div>
-                        <h3>Inovasi</h3>
-                        <p>Mendorong riset dan formulasi modern yang relevan dengan perkembangan tantangan agrikultur.
+                        <h3>{{ __('messages.value_innovation_title') }}</h3>
+                        <p>{{ __('messages.value_innovation_text') }}
                         </p>
                     </div>
                 </article>
@@ -211,19 +206,15 @@
                     <span>03</span>
 
                     <div>
-                        <h3>Keberlanjutan</h3>
-                        <p>
-                            Mengintegrasikan aspek ekonomi, sosial, dan lingkungan untuk dampak positif jangka panjang.
-                        </p>
+                        <h3>{{ __('messages.value_sustainability_title') }}</h3>
+                        <p>{{ __('messages.value_sustainability_text') }}</p>
                     </div>
                 </article>
                 <article class="value-row reveal">
                     <span>04</span>
                     <div>
-                        <h3>Kemitraan</h3>
-                        <p>
-                            Membangun kolaborasi saling menguntungkan dengan petani, distributor, dan seluruh pemangku kepentingan.
-                        </p>
+                        <h3>{{ __('messages.value_partnership_title') }}</h3>
+                        <p>{{ __('messages.value_partnership_text') }}</p>
                     </div>
                 </article>
             </div>
@@ -285,7 +276,7 @@
 
             <div class="collection-more">
                 <a class="text-link" href="{{ route('directors.index') }}">
-                    Lihat struktur organisasi <span>↗</span>
+                    {{ __('messages.view_organization_structure') }} <span>↗</span>
                 </a>
             </div>
         </div>
@@ -338,7 +329,7 @@
                                 <p>{{ $article->translated_excerpt }}</p>
 
                                 <a class="text-link" href="{{ route('articles.show', $article->slug) }}">
-                                    Baca artikel <span>↗</span>
+                                    {{ __('messages.read_more_short') }} <span>↗</span>
                                 </a>
                             </div>
                         </article>
@@ -353,7 +344,7 @@
 
             <div class="collection-more">
                 <a class="text-link" href="{{ route('articles.index') }}">
-                    Baca semua artikel <span>↗</span>
+                    {{ __('messages.read_all_articles') }} <span>↗</span>
                 </a>
             </div>
         </div>
@@ -372,9 +363,7 @@
                     Grow For Indonesia
                 </h2>
 
-                <p>
-                    Tim kami siap membantu Anda mengenal produk dan kerja sama bersama ALBERA.
-                </p>
+                <p>{{ __('messages.home_contact_description') }}</p>
             </div>
 
             <a class="button button-lime"
