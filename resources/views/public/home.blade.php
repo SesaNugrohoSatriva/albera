@@ -114,7 +114,7 @@
                 <div>
                     <div class="eyebrow">Produk pilihan</div>
 
-                    <h2 style="font-size: 50px;">
+                    <h2 style="font-size: 50px; font-family: Georgia, 'Times New Roman', Times, serif;">
                         Pupuk Premium (water soluble & siap serap)<br>
                         <em style="font-style: normal;">lengkap dengan unsur mikro</em>
                     </h2>
