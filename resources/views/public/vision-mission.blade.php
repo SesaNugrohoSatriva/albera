@@ -27,8 +27,7 @@
                     </div>
 
                     <h2>
-                        Bergerak dengan<br>
-                        <em>tujuan yang jelas.</em>
+                        Visi <br> dan <br> Misi
                     </h2>
                 </div>
 

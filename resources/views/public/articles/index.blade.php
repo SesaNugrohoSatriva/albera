@@ -13,12 +13,11 @@
             </div>
 
             <div class="eyebrow">
-                <span></span> ALBERA Journal
+                ALBERA Journal
             </div>
 
             <h1>
-                Catatan untuk<br>
-                <em>terus bertumbuh.</em>
+                Let's Grow Together
             </h1>
 
             <p>

@@ -8,7 +8,7 @@
 
         <div class="wrap hero-inner">
             <div class="hero-copy reveal">
-                <div class="eyebrow eyebrow-light">
+                <div class="eyebrow eyebrow-light" style="color : white">
                     PT. Agro Lestari Berkah Nusantara
                 </div>
 
@@ -184,19 +184,9 @@
     <section class="values-section section-pad" id="kualitas">
         <div class="wrap values-layout">
             <div class="values-lead reveal">
-                <div class="eyebrow eyebrow-light">
-                    Cara kami bekerja
-                </div>
-
                 <h2>
-                    Kualitas yang<br>
-                    tumbuh dari<br>
-                    <em>kepedulian.</em>
+                    <em>Komitmen</em>
                 </h2>
-
-                <p>
-                    Kami membangun setiap langkah dengan memperhatikan kebutuhan nyata di lapangan.
-                </p>
             </div>
 
             <div class="values-list">
@@ -306,8 +296,7 @@
                     </div>
 
                     <h2>
-                        Catatan untuk<br>
-                        <em>terus bertumbuh.</em>
+                        Let's Grow Together
                     </h2>
                 </div>
             </div>
@@ -369,13 +358,14 @@
     <section class="contact-section">
         <div class="wrap contact-inner reveal">
             <div>
-                <div class="eyebrow eyebrow-light">
-                    Mari bertumbuh bersama
+                <div class="eyebrow eyebrow-light" style="color : white">
+                    Let's Grow Together
                 </div>
 
-                <h2>
-                    Ada kebutuhan<br>
-                    yang ingin dibicarakan?
+                <h2 style="font-size: 40px;">
+                    Grow With Innovation<br>
+                    Grow With Partnership<br>
+                    Grow For Indonesia
                 </h2>
 
                 <p>
