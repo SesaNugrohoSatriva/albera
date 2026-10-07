@@ -20,6 +20,11 @@
             <div class="admin-field admin-field-full">
                 <label for="name">Nama produk</label>
                 <input id="name" name="name" value="{{ old('name', $product->name) }}" required maxlength="160">
+                <div class="admin-product-guidance">
+                    <strong>Petunjuk penulisan nama</strong>
+                    <span>Untuk menampilkan simbol ® sebagai superscript, tambahkan <code>*R</code> setelah nama merek.</span>
+                    <span>Contoh: <code>AgrinovaX *R NPK 11-6-31</code> akan tampil sebagai <b>AgrinovaX®</b>.</span>
+                </div>
                 @error('name')
                     <span class="admin-error">{{ $message }}</span>
                 @enderror
@@ -93,8 +98,11 @@
             <div class="admin-field admin-field-full">
                 <label for="image">Foto produk</label>
                 <input id="image" name="image" type="file" accept="image/*">
-                <span class="admin-help">Format gambar, maksimal 5 MB. Foto sebelumnya tetap digunakan bila dibiarkan
-                    kosong.</span>
+                <div class="admin-product-guidance">
+                    <strong>Ukuran foto yang disarankan</strong>
+                    <span>Gunakan gambar persegi berukuran <b>1200 × 1200 piksel</b> agar tampil jelas di katalog.</span>
+                    <span>Format gambar, maksimal <b>5 MB</b>. Foto sebelumnya tetap digunakan bila dibiarkan kosong.</span>
+                </div>
                 @error('image')
                     <span class="admin-error">{{ $message }}</span>
                 @enderror
