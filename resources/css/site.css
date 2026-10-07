@@ -115,21 +115,6 @@ a {
     object-position: left center
 }
 
-.brand-mark {
-    width: 39px;
-    height: 39px;
-    display: grid;
-    place-items: center;
-    border: 1px solid currentColor;
-    border-radius: 50%;
-    font: 600 20px/1 var(--serif);
-    letter-spacing: 0
-}
-
-.brand-mark span {
-    color: var(--leaf)
-}
-
 .brand-copy {
     display: grid;
     line-height: 1.2
@@ -493,19 +478,6 @@ a {
 }
 
 
-.hero-bottom {
-    position: absolute;
-    z-index: 2;
-    bottom: 27px;
-    left: 50%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateX(-50%);
-    color: rgb(255 255 255 / 67%);
-    font-size: 10px;
-    letter-spacing: .04em
-}
-
 /* =========================================================
    5. ABOUT / TENTANG ALBERA
    Menampilkan pengantar perusahaan dan gambar pada homepage.
@@ -839,21 +811,6 @@ a {
     font-size: 12px
 }
 
-.product-note {
-    margin-top: 45px;
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    color: var(--muted);
-    font-size: 10px
-}
-
-.product-note span {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--clay)
-}
 .detail-product-copy h1 {
     font-family: Georgia, serif;
     font-weight: 700;
@@ -2407,15 +2364,6 @@ a {
         gap: 17px
     }
 
-    .hero-bottom {
-        bottom: 20px;
-        font-size: 8px
-    }
-
-    .hero-bottom span:last-child {
-        text-align: right
-    }
-
     .intro-heading h2,
     .vision-title h2,
     .section-heading h2,
@@ -2463,10 +2411,6 @@ a {
         font-size: 24px
     }
 
-    .product-note {
-        align-items: flex-start
-    }
-
     .value-row {
         min-height: 108px;
         grid-template-columns: 30px 1fr 16px;
@@ -2498,10 +2442,6 @@ a {
     .footer-main {
         grid-template-columns: 1fr 1fr;
         gap: 34px 20px
-    }
-
-    .footer-about {
-        grid-column: 1/-1
     }
 
     .whatsapp-float {
