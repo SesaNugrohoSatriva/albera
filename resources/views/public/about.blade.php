@@ -1,24 +1,24 @@
 @extends('layouts.public', [
-    'title' => 'Tentang ALBERA',
-    'description' => 'Mengenal PT. Agro Lestari Berkah Nusantara (ALBERA) sebagai perusahaan agrokimia yang berfokus pada inovasi, efisiensi produktivitas, dan kelestarian lingkungan.'
+    'title' => __('messages.about_albera'),
+    'description' => __('messages.about_meta_description')
 ])
 
 @section('content')
     <section class="collection-page">
         <div class="wrap page-intro">
             <div class="detail-breadcrumb">
-                <a href="{{ route('home') }}">Beranda</a>
+                <a href="{{ route('home') }}">{{ __('messages.home') }}</a>
                 <span>/</span>
-                <span>Tentang kami</span>
+                <span>{{ __('messages.about') }}</span>
             </div>
 
             <div class="eyebrow">
-                Tentang ALBERA
+                {{ __('messages.about_albera') }}
             </div>
 
             <h1>
-                Go to Modern Agriculture.<br>
-                <em>Menuju pertanian yang lebih maju.</em>
+                {{ __('messages.about_headline') }}<br>
+                <em>{{ __('messages.about_headline_emphasis') }}</em>
             </h1>
         </div>
 
@@ -30,28 +30,23 @@
 
             <div class="about-page-copy">
                 <div class="eyebrow">
-                    Siapa kami
+                    {{ __('messages.who_we_are') }}
                 </div>
 
                 <h2>
-                    Solusi pertanian modern untuk produktivitas dan keberlanjutan.
+                    {{ __('messages.about_solution_heading') }}
                 </h2>
 
                 <p>
-                    PT. Agro Lestari Berkah Nusantara (ALBERA) adalah perusahaan
-                    agrokimia sebagai solusi pertanian modern yang berfokus pada
-                    inovasi, efisiensi produktivitas, dan kelestarian lingkungan.
+                    {{ __('messages.about_description_1') }}
                 </p>
 
                 <p>
-                    ALBERA hadir sebagai mitra bagi petani, distributor, dan pelaku
-                    usaha pertanian nasional melalui penyediaan pupuk berkualitas
-                    tinggi yang diformulasikan sesuai kebutuhan spesifik sektor
-                    pertanian dan perkebunan Indonesia.
+                    {{ __('messages.about_description_2') }}
                 </p>
 
                 <a class="button button-green" href="{{ route('contact') }}">
-                    Hubungi ALBERA
+                    {{ __('messages.contact_albera') }}
                     <span>↗</span>
                 </a>
             </div>
@@ -59,35 +54,31 @@
 
         <div class="wrap about-principles">
             <div class="eyebrow">
-                Komitmen ALBERA
+                {{ __('messages.albera_commitment') }}
             </div>
 
             <div class="principle-grid">
                 <article>
                     <span>01</span>
-                    <h3>Pupuk Berkualitas Tinggi</h3>
+                    <h3>{{ __('messages.principle_1_title') }}</h3>
                     <p>
-                        Menyediakan pupuk berkualitas tinggi yang diformulasikan
-                        sesuai kebutuhan spesifik sektor pertanian dan perkebunan
-                        Indonesia.
+                        {{ __('messages.principle_1_text') }}
                     </p>
                 </article>
 
                 <article>
                     <span>02</span>
-                    <h3>Produktivitas dan Efisiensi</h3>
+                    <h3>{{ __('messages.principle_2_title') }}</h3>
                     <p>
-                        Berkomitmen menjaga keseimbangan antara produktivitas,
-                        efisiensi biaya, dan kelestarian tanah.
+                        {{ __('messages.principle_2_text') }}
                     </p>
                 </article>
 
                 <article>
                     <span>03</span>
-                    <h3>Mitra Terpercaya</h3>
+                    <h3>{{ __('messages.principle_3_title') }}</h3>
                     <p>
-                        Menjadi mitra terpercaya bagi petani, distributor, dan
-                        pelaku usaha pertanian nasional.
+                        {{ __('messages.principle_3_text') }}
                     </p>
                 </article>
             </div>

@@ -1,15 +1,15 @@
 @extends('layouts.public', [
     'title' => $product->name . ' | ALBERA',
-    'description' => Str::limit($product->description, 155)
+    'description' => Str::limit(app(\App\Services\TranslationService::class)->translate($product->description, app()->getLocale()), 155)
 ])
 
 @section('content')
     @php($formattedProductName = str_replace('®', '<sup>®</sup>', preg_replace('/\s*\*R\b/u', '<sup>®</sup>', preg_replace('/\bNPK\s+\d+(?:-\d+)*/u', '<span class="product-name-formula">$0</span>', e($product->name)))))
     <section class="detail-hero">
         <div class="wrap detail-breadcrumb">
-            <a href="{{ route('home') }}">Beranda</a>
+            <a href="{{ route('home') }}">{{ __('messages.home') }}</a>
             <span>/</span>
-            <a href="{{ route('home') }}#produk">Produk</a>
+            <a href="{{ route('home') }}#produk">{{ __('messages.products') }}</a>
             <span>/</span>
             <span>{!! $formattedProductName !!}</span>
         </div>
@@ -37,11 +37,11 @@
                 <h1>{!! $formattedProductName !!}</h1>
 
                 <p class="lead">
-                    {{ $product->description }}
+                    {{ app(\App\Services\TranslationService::class)->translate($product->description, app()->getLocale()) }}
                 </p>
 
                 <div class="formula-block">
-                    <span>FORMULA N — P — K</span>
+                    <span>{{ __('messages.formula_label') }}</span>
                     <strong>
                         {{ $product->nitrogen }}
                         <i>—</i>
@@ -53,27 +53,27 @@
 
                 <dl class="product-specs">
                     <div>
-                        <dt>Netto</dt>
+                        <dt>{{ __('messages.netto') }}</dt>
                         <dd>{{ $product->netto }}</dd>
                     </div>
 
                     <div>
-                        <dt>Kategori</dt>
+                        <dt>{{ __('messages.category') }}</dt>
                         <dd>{{ $product->category }}</dd>
                     </div>
 
                     <div>
-                        <dt>Sertifikasi</dt>
+                        <dt>{{ __('messages.certification') }}</dt>
                         <dd>
-                            {{ $product->certification ?: 'Informasi tersedia melalui tim kami' }}
+                            {{ $product->certification ?: __('messages.certification_fallback') }}
                         </dd>
                     </div>
                 </dl>
 
                 <a class="button button-green"
-                    href="https://wa.me/6281128851991?text={{ urlencode('Halo ALBERA, saya ingin bertanya tentang ' . str_replace('*R', '®', $product->name) . '.') }}"
+                    href="https://wa.me/6281128851991?text={{ urlencode(__('messages.whatsapp_product_message', ['product' => str_replace('*R', '®', $product->name)])) }}"
                     target="_blank" rel="noopener noreferrer">
-                    Tanyakan produk ini <span>↗</span>
+                    {{ __('messages.ask_about_product') }} <span>↗</span>
                 </a>
             </div>
         </div>
@@ -83,11 +83,11 @@
         <section class="related-section section-pad">
             <div class="wrap">
                 <div class="eyebrow">
-                    Pilihan lainnya
+                    {{ __('messages.other_choices') }}
                 </div>
 
                 <h2 class="related-title">
-                    Produk <em>ALBERA.</em>
+                    {{ __('messages.product_albera') }} <em>ALBERA.</em>
                 </h2>
 
                 <div class="product-grid">
@@ -120,7 +120,7 @@
                             </h3>
 
                             <a class="text-link" href="{{ route('products.show', $related->slug) }}">
-                                Lihat detail <span>↗</span>
+                                {{ __('messages.view_detail') }} <span>↗</span>
                             </a>
                         </article>
                     @endforeach

@@ -9,26 +9,28 @@ use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 
-Route::get('/', [PublicSiteController::class, 'index'])->name('home');
-Route::get('/tentang-kami', [PublicSiteController::class, 'about'])->name('about');
-Route::get('/visi-misi', [PublicSiteController::class, 'visionMission'])->name('vision-mission');
-Route::get('/produk', [PublicSiteController::class, 'products'])->name('products.index');
-Route::get('/direksi', [PublicSiteController::class, 'directors'])->name('directors.index');
-Route::get('/artikel', [PublicSiteController::class, 'articles'])->name('articles.index');
-Route::get('/kontak', [PublicSiteController::class, 'contact'])->name('contact');
-Route::get('/produk/{product:slug}', [PublicSiteController::class, 'product'])->name('products.show');
-Route::get('/artikel/{article:slug}', [PublicSiteController::class, 'article'])->name('articles.show');
+Route::middleware('set.locale')->group(function () {
+    Route::get('/', [PublicSiteController::class, 'index'])->name('home');
+    Route::get('/tentang-kami', [PublicSiteController::class, 'about'])->name('about');
+    Route::get('/visi-misi', [PublicSiteController::class, 'visionMission'])->name('vision-mission');
+    Route::get('/produk', [PublicSiteController::class, 'products'])->name('products.index');
+    Route::get('/direksi', [PublicSiteController::class, 'directors'])->name('directors.index');
+    Route::get('/artikel', [PublicSiteController::class, 'articles'])->name('articles.index');
+    Route::get('/kontak', [PublicSiteController::class, 'contact'])->name('contact');
+    Route::get('/produk/{product:slug}', [PublicSiteController::class, 'product'])->name('products.show');
+    Route::get('/artikel/{article:slug}', [PublicSiteController::class, 'article'])->name('articles.show');
 
-Route::get('/media/{path}', function (string $path) {
-    $disk = Storage::disk('public');
+    Route::get('/media/{path}', function (string $path) {
+        $disk = Storage::disk('public');
 
-    abort_unless($disk->exists($path), 404);
+        abort_unless($disk->exists($path), 404);
 
-    return response($disk->get($path), 200, [
-        'Content-Type' => $disk->mimeType($path),
-        'Cache-Control' => 'public, max-age=31536000',
-    ]);
-})->where('path', '.*')->name('media');
+        return response($disk->get($path), 200, [
+            'Content-Type' => $disk->mimeType($path),
+            'Cache-Control' => 'public, max-age=31536000',
+        ]);
+    })->where('path', '.*')->name('media');
+});
 
 Route::get('/dashboard', function () {
     return redirect()->route('admin.dashboard');

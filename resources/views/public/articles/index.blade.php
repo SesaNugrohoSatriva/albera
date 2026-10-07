@@ -1,15 +1,15 @@
 @extends('layouts.public', [
-    'title' => 'Artikel & Insight | ALBERA',
-    'description' => 'Artikel ALBERA seputar pertanian, nutrisi tanaman, dan solusi agrokimia.'
+    'title' => __('messages.article_title'),
+    'description' => __('messages.article_description')
 ])
 
 @section('content')
     <section class="collection-page">
         <div class="wrap page-intro">
             <div class="detail-breadcrumb">
-                <a href="{{ route('home') }}">Beranda</a>
+                <a href="{{ route('home') }}">{{ __('messages.home') }}</a>
                 <span>/</span>
-                <span>Artikel</span>
+                <span>{{ __('messages.articles') }}</span>
             </div>
 
             <div class="eyebrow">
@@ -17,11 +17,11 @@
             </div>
 
             <h1>
-                Let's Grow Together
+                {{ __('messages.grow_together') }}
             </h1>
 
             <p>
-                Informasi seputar pertanian, nutrisi tanaman, dan perkembangan solusi agrokimia.
+                {{ __('messages.article_intro') }}
             </p>
         </div>
 
@@ -59,7 +59,7 @@
                                 </p>
 
                                 <a class="text-link" href="{{ route('articles.show', $article->slug) }}">
-                                    Baca artikel <span>↗</span>
+                                    {{ __('messages.read_more_short') }} <span>↗</span>
                                 </a>
                             </div>
                         </article>
@@ -72,7 +72,7 @@
             @else
                 <div class="empty-content">
                     <span>01</span>
-                    <p>Artikel dan insight baru akan segera hadir.</p>
+                    <p>{{ __('messages.article_coming_soon') }}</p>
                 </div>
             @endif
         </div>

@@ -1,24 +1,24 @@
 @extends('layouts.public', [
-    'title' => 'Kontak | ALBERA',
-    'description' => 'Hubungi tim ALBERA untuk informasi produk, distribusi, dan kerja sama.'
+    'title' => __('messages.contact_page_title'),
+    'description' => __('messages.contact_page_description')
 ])
 
 @section('content')
     <section class="collection-page contact-page">
         <div class="wrap page-intro">
             <div class="detail-breadcrumb">
-                <a href="{{ route('home') }}">Beranda</a>
+                <a href="{{ route('home') }}">{{ __('messages.home') }}</a>
                 <span>/</span>
-                <span>Kontak</span>
+                <span>{{ __('messages.contact') }}</span>
             </div>
 
             <div class="eyebrow">
-                Hubungi ALBERA
+                {{ __('messages.contact_albera') }}
             </div>
 
             <h1>
-                Mari bicarakan<br>
-                <em>kebutuhan Anda.</em>
+                {{ __('messages.contact_headline') }}<br>
+                <em>{{ __('messages.contact_headline_emphasis') }}</em>
             </h1>
         </div>
 
@@ -26,11 +26,11 @@
             <div class="contact-page-main">
 
                 <h2>
-                    Temukan solusi yang tepat untuk kebutuhan pertanian Anda.
+                    {{ __('messages.contact_solution_heading') }}
                 </h2>
 
                 <p>
-                    Ceritakan kebutuhan produk atau kerja sama Anda. Hubungi tim kami melalui kanal berikut.
+                    {{ __('messages.contact_intro') }}
                 </p>
 
                 <div class="whatsapp-buttons">

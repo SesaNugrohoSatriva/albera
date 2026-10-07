@@ -1,19 +1,19 @@
 @extends('layouts.public', [
-    'title' => 'Management Board | ALBERA',
-    'description' => 'Kenali tim yang mendukung operasional dan pengembangan PT. Agro Lestari Berkah Nusantara.'
+    'title' => __('messages.management_title'),
+    'description' => __('messages.management_description')
 ])
 
 @section('content')
     <section class="collection-page management-page">
         <div class="wrap page-intro">
             <div class="detail-breadcrumb">
-                <a href="{{ route('home') }}">Beranda</a>
+                <a href="{{ route('home') }}">{{ __('messages.home') }}</a>
                 <span>/</span>
-                <span>Management Board</span>
+                <span>{{ __('messages.management_board') }}</span>
             </div>
 
             <div class="eyebrow">
-                MANAGEMENT BOARD
+                {{ strtoupper(__('messages.management_board')) }}
             </div>
 
             <h1 style="font-family: 'Arial Rounded MT Bold', 'Trebuchet MS', 'Segoe UI', sans-serif; font-weight: 700; font-size: 65px;">

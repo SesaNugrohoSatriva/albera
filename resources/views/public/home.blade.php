@@ -9,26 +9,25 @@
         <div class="wrap hero-inner">
             <div class="hero-copy reveal">
                 <div class="eyebrow eyebrow-light" style="color : white">
-                    PT. Agro Lestari Berkah Nusantara
+                    {{ __('messages.company_name') }}
                 </div>
 
                 <h1>
-                    Membangun Pertanian Berkelanjutan,<br>
-                    <em>Mendukung Ketahanan Pangan Nasional.</em>
+                    {{ __('messages.home_hero_title') }},<br>
+                    <em>{{ __('messages.home_hero_emphasis') }}</em>
                 </h1>
 
                 <p>
-                    Solusi nutrisi tanaman yang dirancang untuk mendukung produktivitas pertanian dan masa depan pangan
-                    Indonesia.
+                    {{ __('messages.home_hero_description') }}
                 </p>
 
                 <div class="hero-actions">
                     <a class="button button-lime" href="{{ route('products.index') }}">
-                        Jelajahi produk <span>↗</span>
+                        {{ __('messages.explore_products') }} <span>↗</span>
                     </a>
 
                     <a class="text-link text-link-light" href="{{ route('about') }}">
-                        Tentang Kami <span>↗</span>
+                        {{ __('messages.about_us') }} <span>↗</span>
                     </a>
                 </div>
             </div>
@@ -38,24 +37,23 @@
     <section class="intro-section section-pad" id="tentang">
         <div class="wrap intro-grid">
             <div class="intro-heading reveal">
-                <div class="eyebrow">Tentang ALBERA</div>
+                <div class="eyebrow">{{ __('messages.about_albera') }}</div>
 
                 <h2 style="font-family: monsterat-arabic;">
-                    Go To Modern Culture<br>
-                    <em>Menumbuhkan masa depan.</em>
+                    {{ __('messages.modern_culture') }}<br>
+                    <em>{{ __('messages.grow_future') }}</em>
                 </h2>
             </div>
 
             <div class="intro-copy reveal">
                 <p class="lead">
-                    PT. Agro Lestar Berkah Nusantara (Albera) adalah perusahaan agrokimia 
-                    sebagai solusi pertanian modern yang berfokus pada inovasi efisiensi produktivitas kelestarian lingkungan 
+                    {{ __('messages.company_intro') }}
                 </p>
 
                 <ul class="about-points">
-                    <li>Penyedia pupuk berkualitas tinggi yang diformulasikan sesuai kebutuhan spesifik sektor pertanian dan perkebunan Indonesia.</li>
-                    <li>Berkomitmen menjaga keseimbangan antara produktivitas, efisiensi biaya, dan kelestarian tanah</li>
-                    <li>Mitra terpercaya bagi petani, distributor, dan pelaku usaha pertanian nasional</li>
+                    <li>{{ __('messages.about_point_1') }}</li>
+                    <li>{{ __('messages.about_point_2') }}</li>
+                    <li>{{ __('messages.about_point_3') }}</li>
                 </ul>
 
             </div>
@@ -70,37 +68,36 @@
     <section class="vision-section section-pad" id="visi-misi">
         <div class="wrap vision-layout">
             <div class="vision-title reveal">
-                <div class="eyebrow">Arah kami</div>
+                <div class="eyebrow">{{ __('messages.vision_title') }}</div>
 
                 <h2>
-                    Visi<br> dan <br>Misi
+                    {{ __('messages.vision') }}<br> {{ __('messages.and') }} <br>{{ __('messages.mission') }}
                 </h2>
             </div>
 
             <div class="vision-content reveal">
                 <div class="vision-item">
-                    <span>VISI</span>
+                    <span>{{ __('messages.vision_upper') }}</span>
 
                     <p>
-                        Menjadi perusahaan agrokimia yang unggul, berdaya saing, dan berkontribusi pada pembangunan nasional
-                        yang berkelanjutan.
+                        {{ __('messages.vision_text') }}
                     </p>
                 </div>
 
                 <div class="vision-item">
-                    <span>MISI</span>
+                    <span>{{ __('messages.mission_upper') }}</span>
 
                     <div class="mission-lines">
                         <p>
-                            Mendukung ketahanan pangan melalui ketersediaan pupuk berkualitas.
+                            {{ __('messages.mission_point_1') }}
                         </p>
 
                         <p>
-                            Membantu meningkatkan produktivitas dan efisiensi usaha pertanian.
+                            {{ __('messages.mission_point_2') }}
                         </p>
 
                         <p>
-                            Mengembangkan solusi yang memperhatikan kesehatan tanah dan lingkungan.
+                            {{ __('messages.mission_point_3') }}
                         </p>
                     </div>
                 </div>
@@ -112,11 +109,11 @@
         <div class="wrap">
             <div class="section-heading split-heading reveal">
                 <div>
-                    <div class="eyebrow">Produk pilihan</div>
+                    <div class="eyebrow">{{ __('messages.featured_products') }}</div>
 
                     <h2 style="font-size: 50px; font-family: Georgia, 'Times New Roman', Times, serif;">
-                        Pupuk Premium (water soluble & siap serap)<br>
-                        <em style="font-style: normal;">lengkap dengan unsur mikro</em>
+                        {{ __('messages.product_title') }}<br>
+                        <em style="font-style: normal;">{{ __('messages.product_subtitle') }}</em>
                     </h2>
                 </div>
             </div>

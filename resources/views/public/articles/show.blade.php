@@ -6,9 +6,9 @@
 @section('content')
     <article class="article-detail">
         <div class="wrap detail-breadcrumb">
-            <a href="{{ route('home') }}">Beranda</a>
+            <a href="{{ route('home') }}">{{ __('messages.home') }}</a>
             <span>/</span>
-            <a href="{{ route('home') }}#artikel">Artikel</a>
+            <a href="{{ route('home') }}#artikel">{{ __('messages.articles') }}</a>
             <span>/</span>
             <span>{{ Str::limit($article->title, 42) }}</span>
         </div>
@@ -46,9 +46,9 @@
 
         <div class="wrap article-body-layout">
             <aside>
-                <span>DALAM ARTIKEL</span>
+                <span>{{ __('messages.in_article') }}</span>
                 <p>{{ $article->title }}</p>
-                <a href="{{ route('home') }}#artikel">← Semua artikel</a>
+                <a href="{{ route('home') }}#artikel">← {{ __('messages.all_articles') }}</a>
             </aside>
 
             <div class="article-body">
@@ -56,7 +56,7 @@
 
                 <div class="article-signoff">
                     <span>ALBERA JOURNAL</span>
-                    <p>Terus tumbuh bersama pertanian Indonesia.</p>
+                    <p>{{ __('messages.grow_with_indonesia') }}</p>
                 </div>
             </div>
         </div>
@@ -66,11 +66,11 @@
         <section class="related-section section-pad">
             <div class="wrap">
                 <div class="eyebrow">
-                    Baca juga
+                    {{ __('messages.read_more') }}
                 </div>
 
                 <h2 class="related-title">
-                    Lebih banyak <em>insight.</em>
+                    {{ __('messages.more_insight') }} <em>{{ __('messages.insight_label') }}</em>
                 </h2>
 
                 <div class="article-grid">
@@ -105,7 +105,7 @@
                                 <p>{{ $related->excerpt }}</p>
 
                                 <a class="text-link" href="{{ route('articles.show', $related->slug) }}">
-                                    Baca artikel
+                                    {{ __('messages.read_more_short') }}
                                     <span>↗</span>
                                 </a>
                             </div>

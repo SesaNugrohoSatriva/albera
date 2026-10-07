@@ -1,28 +1,28 @@
 @extends('layouts.public', [
-    'title' => 'Produk | ALBERA',
-    'description' => 'Jelajahi produk pupuk ALBERA dan informasi lengkap formulasi serta kemasannya.'
+    'title' => __('messages.products_page_title'),
+    'description' => __('messages.products_page_description')
 ])
 
 @section('content')
     <section class="collection-page">
         <div class="wrap page-intro">
             <div class="detail-breadcrumb">
-                <a href="{{ route('home') }}">Beranda</a>
+                <a href="{{ route('home') }}">{{ __('messages.home') }}</a>
                 <span>/</span>
-                <span>Produk</span>
+                <span>{{ __('messages.products') }}</span>
             </div>
 
             <div class="eyebrow">
-                Katalog
+                {{ __('messages.catalogue') }}
             </div>
 
             <h1>
-                Produk Unggulan<br>
-                <em style="font-size: 60px;">PT Agro Berkah Lestari Nusantara</em>
+                {{ __('messages.products_highlight_title') }}<br>
+                <em style="font-size: 60px;">{{ __('messages.products_company_name') }}</em>
             </h1>
 
             <p>
-                Pupuk Premium (water soluble & siap serap) lengkap dengan unsur mikro
+                {{ __('messages.product_title') }} {{ __('messages.product_subtitle') }}
             </p>
         </div>
 
@@ -62,7 +62,7 @@
                             </p>
 
                             <a class="text-link" href="{{ route('products.show', $product->slug) }}">
-                                Lihat detail <span>↗</span>
+                                {{ __('messages.view_detail') }} <span>↗</span>
                             </a>
                         </article>
                     @endforeach
@@ -74,7 +74,7 @@
             @else
                 <div class="empty-content">
                     <span>01</span>
-                    <p>Produk unggulan ALBERA akan segera hadir.</p>
+                    <p>{{ __('messages.products_coming_soon') }}</p>
                 </div>
             @endif
         </div>
