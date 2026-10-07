@@ -194,9 +194,8 @@
                     <span>01</span>
 
                     <div>
-                        <h3>Kualitas terjaga</h3>
-                        <p>
-                            Mutu produk dan konsistensi proses menjadi perhatian kami di setiap tahap.
+                        <h3>Kualitas</h3>
+                        <p>Menghadirkan produk agrokimia standar tinggi yang teruji memberikan manfaat nyata di lapangan.
                         </p>
                     </div>
                 </article>
@@ -205,9 +204,8 @@
                     <span>02</span>
 
                     <div>
-                        <h3>Solusi yang relevan</h3>
-                        <p>
-                            Produk dikembangkan dengan mempertimbangkan kebutuhan nutrisi tanaman.
+                        <h3>Inovasi</h3>
+                        <p>Mendorong riset dan formulasi modern yang relevan dengan perkembangan tantangan agrikultur.
                         </p>
                     </div>
                 </article>
@@ -216,9 +214,18 @@
                     <span>03</span>
 
                     <div>
-                        <h3>Kemitraan berkelanjutan</h3>
+                        <h3>Keberlanjutan</h3>
                         <p>
-                            Hubungan jangka panjang dengan petani dan mitra adalah bagian dari pertumbuhan kami.
+                            Mengintegrasikan aspek ekonomi, sosial, dan lingkungan untuk dampak positif jangka panjang.
+                        </p>
+                    </div>
+                </article>
+                <article class="value-row reveal">
+                    <span>04</span>
+                    <div>
+                        <h3>Kemitraan</h3>
+                        <p>
+                            Membangun kolaborasi saling menguntungkan dengan petani, distributor, dan seluruh pemangku kepentingan.
                         </p>
                     </div>
                 </article>
