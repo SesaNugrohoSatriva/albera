@@ -45,12 +45,27 @@
                 <a class="nav-contact {{ request()->routeIs('contact') ? 'active' : '' }}" href="{{ route('contact') }}">{{ __('messages.contact_us') }} <span aria-hidden="true">↗</span></a>
 
                 <div class="lang-switcher" aria-label="{{ __('messages.language') }}">
+                    <span class="lang-switcher-label">{{ __('messages.language') }}</span>
                     @foreach (['id' => 'ID', 'en' => 'EN'] as $localeCode => $localeLabel)
                         <a
                             href="{{ request()->fullUrlWithQuery(['locale' => $localeCode]) }}"
                             class="{{ app()->getLocale() === $localeCode ? 'is-active' : '' }}"
-                            aria-label="{{ $localeLabel }}"
+                            aria-label="{{ $localeCode === 'id' ? 'Bahasa Indonesia' : 'English' }}"
                             @if (app()->getLocale() === $localeCode) aria-current="page" @endif>
+                            @if ($localeCode === 'id')
+                                <svg class="lang-flag" viewBox="0 0 24 16" aria-hidden="true" focusable="false">
+                                    <rect width="24" height="8" fill="#e32636"/>
+                                    <rect y="8" width="24" height="8" fill="#fff"/>
+                                </svg>
+                            @else
+                                <svg class="lang-flag" viewBox="0 0 24 16" aria-hidden="true" focusable="false">
+                                    <rect width="24" height="16" fill="#23407f"/>
+                                    <path d="M0 0 24 16M24 0 0 16" stroke="#fff" stroke-width="4"/>
+                                    <path d="M0 0 24 16M24 0 0 16" stroke="#c8102e" stroke-width="1.6"/>
+                                    <path d="M12 0v16M0 8h24" stroke="#fff" stroke-width="6"/>
+                                    <path d="M12 0v16M0 8h24" stroke="#c8102e" stroke-width="3"/>
+                                </svg>
+                            @endif
                             {{ $localeLabel }}
                         </a>
                     @endforeach

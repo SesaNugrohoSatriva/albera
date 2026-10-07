@@ -167,24 +167,50 @@ a {
 .lang-switcher {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     margin-left: 10px;
     padding-left: 10px;
     border-left: 1px solid rgb(255 255 255 / 20%);
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: .12em;
-    text-transform: uppercase;
+}
+
+.lang-switcher-label {
+    margin-right: 3px;
+    color: rgb(255 255 255 / 72%);
+    font-size: 10px;
+    font-weight: 500;
 }
 
 .lang-switcher a {
-    color: rgb(255 255 255 / 72%);
-    transition: color .2s, opacity .2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 7px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: rgb(255 255 255 / 78%);
+    letter-spacing: .06em;
+    transition: color .2s, background-color .2s, border-color .2s;
 }
 
 .lang-switcher a:hover,
 .lang-switcher a.is-active {
     color: var(--leaf);
+}
+
+.lang-switcher a.is-active {
+    border-color: rgb(255 255 255 / 35%);
+    background: rgb(255 255 255 / 10%);
+}
+
+.lang-flag {
+    display: block;
+    width: 18px;
+    height: 12px;
+    flex: 0 0 auto;
+    border-radius: 1px;
+    box-shadow: 0 0 0 1px rgb(255 255 255 / 24%);
 }
 
 .site-header [x-cloak] {
@@ -2244,6 +2270,20 @@ a {
         margin-top: 12px;
         padding-inline: 12px;
         border: 1px solid rgb(255 255 255 / 35%)
+    }
+
+    .site-menu .lang-switcher {
+        justify-self: start;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin: 12px 0 0;
+        padding: 12px 4px 0;
+        border-top: 1px solid rgb(255 255 255 / 16%);
+        border-left: 0;
+    }
+
+    .lang-switcher-label {
+        flex-basis: 100%;
     }
 
     .hero {
