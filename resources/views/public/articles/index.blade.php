@@ -32,7 +32,7 @@
                         <article class="article-tile">
                             <a class="article-image" href="{{ route('articles.show', $article->slug) }}">
                                 @if($article->image)
-                                    <img src="{{ route('media', ['path' => $article->image]) }}" alt="{{ $article->title }}" loading="lazy">
+                                    <img src="{{ route('media', ['path' => $article->image]) }}" alt="{{ $article->translated_title }}" loading="lazy">
                                 @else
                                     <div class="article-placeholder">
                                         <span>ALBERA JOURNAL</span>
@@ -50,12 +50,12 @@
 
                                 <h2>
                                     <a href="{{ route('articles.show', $article->slug) }}">
-                                        {{ $article->title }}
+                                        {{ $article->translated_title }}
                                     </a>
                                 </h2>
 
                                 <p>
-                                    {{ $article->excerpt }}
+                                    {{ $article->translated_excerpt }}
                                 </p>
 
                                 <a class="text-link" href="{{ route('articles.show', $article->slug) }}">

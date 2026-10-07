@@ -1,10 +1,10 @@
 @extends('layouts.public', [
-    'title' => $product->name . ' | ALBERA',
-    'description' => Str::limit(app(\App\Services\TranslationService::class)->translate($product->description, app()->getLocale()), 155)
+    'title' => $product->translated_name . ' | ALBERA',
+    'description' => Str::limit($product->translated_description, 155)
 ])
 
 @section('content')
-    @php($formattedProductName = str_replace('®', '<sup>®</sup>', preg_replace('/\s*\*R\b/u', '<sup>®</sup>', preg_replace('/\bNPK\s+\d+(?:-\d+)*/u', '<span class="product-name-formula">$0</span>', e($product->name)))))
+    @php($formattedProductName = str_replace('®', '<sup>®</sup>', preg_replace('/\s*\*R\b/u', '<sup>®</sup>', preg_replace('/\bNPK\s+\d+(?:-\d+)*/u', '<span class="product-name-formula">$0</span>', e($product->translated_name)))))
     <section class="detail-hero">
         <div class="wrap detail-breadcrumb">
             <a href="{{ route('home') }}">{{ __('messages.home') }}</a>
@@ -17,7 +17,7 @@
         <div class="wrap product-detail-grid">
             <div class="detail-product-image{{ $product->image ? ' has-image' : '' }}">
                 @if($product->image)
-                    <img src="{{ route('media', ['path' => $product->image]) }}" alt="{{ $product->name }}">
+                    <img src="{{ route('media', ['path' => $product->image]) }}" alt="{{ $product->translated_name }}">
                 @else
                     <div class="product-placeholder">
                         <span>ALBERA</span>
@@ -31,13 +31,13 @@
 
             <div class="detail-product-copy">
                 <div class="eyebrow">
-                    {{ $product->category }}
+                    {{ $product->translated_category }}
                 </div>
 
                 <h1>{!! $formattedProductName !!}</h1>
 
                 <p class="lead">
-                    {{ app(\App\Services\TranslationService::class)->translate($product->description, app()->getLocale()) }}
+                    {{ $product->translated_description }}
                 </p>
 
                 <div class="formula-block">
@@ -59,19 +59,19 @@
 
                     <div>
                         <dt>{{ __('messages.category') }}</dt>
-                        <dd>{{ $product->category }}</dd>
+                        <dd>{{ $product->translated_category }}</dd>
                     </div>
 
                     <div>
                         <dt>{{ __('messages.certification') }}</dt>
                         <dd>
-                            {{ $product->certification ?: __('messages.certification_fallback') }}
+                            {{ $product->translated_certification ?: __('messages.certification_fallback') }}
                         </dd>
                     </div>
                 </dl>
 
                 <a class="button button-green"
-                    href="https://wa.me/6281128851991?text={{ urlencode(__('messages.whatsapp_product_message', ['product' => str_replace('*R', '®', $product->name)])) }}"
+                    href="https://wa.me/6281128851991?text={{ urlencode(__('messages.whatsapp_product_message', ['product' => str_replace('*R', '®', $product->translated_name)])) }}"
                     target="_blank" rel="noopener noreferrer">
                     {{ __('messages.ask_about_product') }} <span>↗</span>
                 </a>
@@ -92,11 +92,11 @@
 
                 <div class="product-grid">
                     @foreach($relatedProducts as $related)
-                        @php($formattedRelatedName = str_replace('®', '<sup>®</sup>', preg_replace('/\s*\*R\b/u', '<sup>®</sup>', preg_replace('/\bNPK\s+\d+(?:-\d+)*/u', '<span class="product-name-formula">$0</span>', e($related->name)))))
+                        @php($formattedRelatedName = str_replace('®', '<sup>®</sup>', preg_replace('/\s*\*R\b/u', '<sup>®</sup>', preg_replace('/\bNPK\s+\d+(?:-\d+)*/u', '<span class="product-name-formula">$0</span>', e($related->translated_name)))) )
                         <article class="product-tile">
                             <a class="product-visual" href="{{ route('products.show', $related->slug) }}">
                                 @if($related->image)
-                                    <img src="{{ route('media', ['path' => $related->image]) }}" alt="{{ $related->name }}" loading="lazy">
+                                    <img src="{{ route('media', ['path' => $related->image]) }}" alt="{{ $related->translated_name }}" loading="lazy">
                                 @else
                                     <div class="product-placeholder">
                                         <span>ALBERA</span>
@@ -109,7 +109,7 @@
                             </a>
 
                             <div class="product-meta">
-                                <span>{{ $related->category }}</span>
+                                <span>{{ $related->translated_category }}</span>
                                 <span>{{ $related->netto }}</span>
                             </div>
 

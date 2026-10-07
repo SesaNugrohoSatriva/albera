@@ -30,11 +30,11 @@
             @if($products->isNotEmpty())
                 <div class="product-grid">
                     @foreach($products as $product)
-                        @php($formattedProductName = str_replace('®', '<sup>®</sup>', preg_replace('/\s*\*R\b/u', '<sup>®</sup>', preg_replace('/\bNPK\s+\d+(?:-\d+)*/u', '<span class="product-name-formula">$0</span>', e($product->name)))))
+                        @php($formattedProductName = str_replace('®', '<sup>®</sup>', preg_replace('/\s*\*R\b/u', '<sup>®</sup>', preg_replace('/\bNPK\s+\d+(?:-\d+)*/u', '<span class="product-name-formula">$0</span>', e($product->translated_name)))) )
                         <article class="product-tile">
                             <a class="product-visual" href="{{ route('products.show', $product->slug) }}">
                                 @if($product->image)
-                                    <img src="{{ route('media', ['path' => $product->image]) }}" alt="{{ $product->name }}" loading="lazy">
+                                    <img src="{{ route('media', ['path' => $product->image]) }}" alt="{{ $product->translated_name }}" loading="lazy">
                                 @else
                                     <div class="product-placeholder">
                                         <span>ALBERA</span>
@@ -47,7 +47,7 @@
                             </a>
 
                             <div class="product-meta">
-                                <span>{{ $product->category }}</span>
+                                <span>{{ $product->translated_category }}</span>
                                 <span>{{ $product->netto }}</span>
                             </div>
 
@@ -58,7 +58,7 @@
                             </h2>
 
                             <p>
-                                {{ Str::limit($product->description, 145) }}
+                                {{ Str::limit($product->translated_description, 145) }}
                             </p>
 
                             <a class="text-link" href="{{ route('products.show', $product->slug) }}">

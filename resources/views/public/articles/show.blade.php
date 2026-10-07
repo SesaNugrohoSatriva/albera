@@ -1,6 +1,6 @@
 @extends('layouts.public', [
-    'title' => $article->title . ' | ALBERA Journal',
-    'description' => $article->excerpt
+    'title' => $article->translated_title . ' | ALBERA Journal',
+    'description' => Str::limit($article->translated_excerpt, 155)
 ])
 
 @section('content')
@@ -10,7 +10,7 @@
             <span>/</span>
             <a href="{{ route('home') }}#artikel">{{ __('messages.articles') }}</a>
             <span>/</span>
-            <span>{{ Str::limit($article->title, 42) }}</span>
+            <span>{{ Str::limit($article->translated_title, 42) }}</span>
         </div>
 
         <header class="article-detail-header wrap">
@@ -18,10 +18,10 @@
                 ALBERA Journal
             </div>
 
-            <h1>{{ $article->title }}</h1>
+            <h1>{{ $article->translated_title }}</h1>
 
             <p class="article-deck">
-                {{ $article->excerpt }}
+                {{ $article->translated_excerpt }}
             </p>
 
             <div class="article-byline">
@@ -35,7 +35,7 @@
 
         <div class="article-detail-cover wrap">
             @if($article->image)
-                <img src="{{ route('media', ['path' => $article->image]) }}" alt="{{ $article->title }}">
+                <img src="{{ route('media', ['path' => $article->image]) }}" alt="{{ $article->translated_title }}">
             @else
                 <div class="article-placeholder">
                     <span>ALBERA JOURNAL</span>
@@ -47,12 +47,12 @@
         <div class="wrap article-body-layout">
             <aside>
                 <span>{{ __('messages.in_article') }}</span>
-                <p>{{ $article->title }}</p>
+                <p>{{ $article->translated_title }}</p>
                 <a href="{{ route('home') }}#artikel">← {{ __('messages.all_articles') }}</a>
             </aside>
 
             <div class="article-body">
-                {!! nl2br(e($article->content)) !!}
+                {!! $article->translated_content !!}
 
                 <div class="article-signoff">
                     <span>ALBERA JOURNAL</span>
@@ -78,7 +78,7 @@
                         <article class="article-tile">
                             <a class="article-image" href="{{ route('articles.show', $related->slug) }}">
                                 @if($related->image)
-                                    <img src="{{ route('media', ['path' => $related->image]) }}" alt="{{ $related->title }}" loading="lazy">
+                                    <img src="{{ route('media', ['path' => $related->image]) }}" alt="{{ $related->translated_title }}" loading="lazy">
                                 @else
                                     <div class="article-placeholder">
                                         <span>ALBERA JOURNAL</span>
@@ -98,11 +98,11 @@
 
                                 <h3>
                                     <a href="{{ route('articles.show', $related->slug) }}">
-                                        {{ $related->title }}
+                                        {{ $related->translated_title }}
                                     </a>
                                 </h3>
 
-                                <p>{{ $related->excerpt }}</p>
+                                <p>{{ $related->translated_excerpt }}</p>
 
                                 <a class="text-link" href="{{ route('articles.show', $related->slug) }}">
                                     {{ __('messages.read_more_short') }}

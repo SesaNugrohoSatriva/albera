@@ -121,11 +121,11 @@
             @if($products->isNotEmpty())
                 <div class="product-grid">
                     @foreach($products as $product)
-                        @php($formattedProductName = str_replace('®', '<sup>®</sup>', preg_replace('/\s*\*R\b/u', '<sup>®</sup>', preg_replace('/\bNPK\s+\d+(?:-\d+)*/u', '<span class="product-name-formula">$0</span>', e($product->name)))))
+                        @php($formattedProductName = str_replace('®', '<sup>®</sup>', preg_replace('/\s*\*R\b/u', '<sup>®</sup>', preg_replace('/\bNPK\s+\d+(?:-\d+)*/u', '<span class="product-name-formula">$0</span>', e($product->translated_name)))) )
                         <article class="product-tile reveal">
                             <a class="product-visual" href="{{ route('products.show', $product->slug) }}">
                                 @if($product->image)
-                                    <img src="{{ route('media', ['path' => $product->image]) }}" alt="{{ $product->name }}" loading="lazy">
+                                    <img src="{{ route('media', ['path' => $product->image]) }}" alt="{{ $product->translated_name }}" loading="lazy">
                                 @else
                                     <div class="product-placeholder">
                                         <span>ALBERA</span>
@@ -138,7 +138,7 @@
                             </a>
 
                             <div class="product-meta">
-                                <span>{{ $product->category }}</span>
+                                <span>{{ $product->translated_category }}</span>
                                 <span>{{ $product->netto }}</span>
                             </div>
 
@@ -149,7 +149,7 @@
                             </h3>
 
                             <p>
-                                {{ Str::limit($product->description, 145) }}
+                                {{ Str::limit($product->translated_description, 145) }}
                             </p>
 
                             <a class="text-link" href="{{ route('products.show', $product->slug) }}">
@@ -311,7 +311,7 @@
                         <article class="article-tile reveal">
                             <a class="article-image" href="{{ route('articles.show', $article->slug) }}">
                                 @if($article->image)
-                                    <img src="{{ route('media', ['path' => $article->image]) }}" alt="{{ $article->title }}" loading="lazy">
+                                    <img src="{{ route('media', ['path' => $article->image]) }}" alt="{{ $article->translated_title }}" loading="lazy">
                                 @else
                                     <div class="article-placeholder">
                                         <span>ALBERA JOURNAL</span>
@@ -331,11 +331,11 @@
 
                                 <h3>
                                     <a href="{{ route('articles.show', $article->slug) }}">
-                                        {{ $article->title }}
+                                        {{ $article->translated_title }}
                                     </a>
                                 </h3>
 
-                                <p>{{ $article->excerpt }}</p>
+                                <p>{{ $article->translated_excerpt }}</p>
 
                                 <a class="text-link" href="{{ route('articles.show', $article->slug) }}">
                                     Baca artikel <span>↗</span>
